@@ -1,7 +1,0 @@
-* - Denotes project
-
-*Sl66p (Sleep) Security - Sleep soundly at night knowing your IOT devices are secured
-
-*PowerDog - PowerShell, but with extra ColDog Studios tools
-
-Informal Office - Choice to go by "Nicknames" ex: ColDog, Juice, etc
