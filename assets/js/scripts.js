@@ -41,6 +41,117 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.head.appendChild(meta);
 	}
 
+	// Function to add canonical link
+	function addCanonical(url) {
+		const link = document.createElement("link");
+		link.rel = "canonical";
+		link.href = url;
+		document.head.appendChild(link);
+	}
+
+	// Function to add search engine specific meta tags
+	function addSearchEngineMetaTags(path) {
+		// Add canonical URL
+		addCanonical(window.location.href);
+
+		// Default robots directive for all pages
+		let robotsDirective = "index, follow";
+
+		// Page-specific robots directives
+		if (path.includes("/legal/")) {
+			robotsDirective = "noindex, nofollow"; // Block legal pages from indexing
+		} else if (path.includes("/branding/")) {
+			robotsDirective = "noindex, nofollow"; // Keep internal branding private
+		} else if (path === "/404.html") {
+			robotsDirective = "noindex, nofollow"; // Don't index 404 pages
+		} else if (path.includes("/contact/")) {
+			robotsDirective = "index, follow"; // Good for local SEO
+		}
+
+		// General robots meta tag
+		addMetaTag("robots", robotsDirective);
+
+		// Google-specific directives
+		addMetaTag("googlebot", `${robotsDirective}, max-snippet:160, max-image-preview:large`);
+
+		// Bing-specific directives
+		addMetaTag("bingbot", robotsDirective);
+
+		// Additional meta tags for better indexing
+		addMetaTag("referrer", "no-referrer-when-downgrade");
+		addMetaTag("format-detection", "telephone=no");
+
+		// Add hreflang for English (assuming your site is English-only)
+		const hrefLang = document.createElement("link");
+		hrefLang.rel = "alternate";
+		hrefLang.hreflang = "en";
+		hrefLang.href = window.location.href;
+		document.head.appendChild(hrefLang);
+	}
+
+	// Function to add JSON-LD structured data
+	function addStructuredData(pageMeta, path) {
+		const script = document.createElement("script");
+		script.type = "application/ld+json";
+
+		let structuredData;
+
+		if (path === "/") {
+			// Organization schema for homepage
+			structuredData = {
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				name: "ColDog Studios",
+				url: "https://www.coldogstudios.com",
+				logo: "https://www.coldogstudios.com/assets/images/cds/logo/cdsLogo.png",
+				description: pageMeta.description,
+				foundingDate: "2023",
+				contactPoint: {
+					"@type": "ContactPoint",
+					url: "https://www.coldogstudios.com/contact/",
+				},
+				sameAs: [],
+			};
+		} else if (path.includes("/projects/")) {
+			// SoftwareApplication schema for projects
+			structuredData = {
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				name: pageMeta.title,
+				description: pageMeta.description,
+				url: window.location.href,
+				author: {
+					"@type": "Organization",
+					name: "ColDog Studios",
+				},
+				publisher: {
+					"@type": "Organization",
+					name: "ColDog Studios",
+				},
+			};
+		} else {
+			// WebPage schema for other pages
+			structuredData = {
+				"@context": "https://schema.org",
+				"@type": "WebPage",
+				name: pageMeta.title,
+				description: pageMeta.description,
+				url: window.location.href,
+				author: {
+					"@type": "Organization",
+					name: "ColDog Studios",
+				},
+				publisher: {
+					"@type": "Organization",
+					name: "ColDog Studios",
+				},
+			};
+		}
+
+		script.textContent = JSON.stringify(structuredData);
+		document.head.appendChild(script);
+	}
+
 	// Fetch and apply metadata from metadata.json
 	fetch("https://www.coldogstudios.com/metadata.json")
 		.then((response) => {
@@ -64,6 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				metaTags.forEach((tag) => addMetaTag(tag.name, tag.content));
 
+				// Add Search Engine Specific Meta Tags
+				addSearchEngineMetaTags(currentPath);
+
 				// Add Social Media Meta Tags
 				const currentUrl = window.location.href;
 				const siteTitle = document.title;
@@ -80,6 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				addMetaTag("twitter:title", siteTitle);
 				addMetaTag("twitter:description", pageMeta.description);
 				addMetaTag("twitter:image", "https://www.coldogstudios.com/assets/images/cds/cdsWallpaperLite.png");
+
+				// Add JSON-LD structured data for better search engine understanding
+				addStructuredData(pageMeta, currentPath);
 			} else {
 				console.error("No metadata found for the current path:", currentPath);
 			}
