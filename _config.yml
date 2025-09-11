@@ -1,0 +1,62 @@
+# Site settings
+title: "ColDog Studios"
+description: "Welcome to ColDog Studios. We offer comprehensive security services."
+baseurl: ""
+url: "https://www.coldogstudios.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+    - jekyll-sitemap
+    - jekyll-seo-tag
+
+# Collections
+collections:
+    data:
+        output: false
+
+# Default values
+defaults:
+    - scope:
+          path: ""
+          type: "pages"
+      values:
+          layout: "default"
+    - scope:
+          path: "legal"
+      values:
+          layout: "default"
+          robots: "noindex, nofollow"
+
+# SEO settings
+author: "ColDog Studios"
+twitter:
+    username: ColDogStudios
+social:
+    name: ColDog Studios
+    links:
+        - https://twitter.com/ColDogStudios
+        - https://linkedin.com/company/coldog-studios
+        - https://www.youtube.com/channel/UCg5OwhXiYjPM01L009qfnDw
+
+# GitHub Pages settings
+github: [metadata]
+kramdown:
+    input: GFM
+    hard_wrap: false
+future: true
+jailed: false
+theme: null
+gfm_quirks: paragraph_end
+
+# Exclude files from Jekyll processing
+exclude:
+    - node_modules/
+    - .git/
+    - .gitignore
+    - README.md
+    - Gemfile
+    - Gemfile.lock
+    - assets/html/
+    - metadata.json

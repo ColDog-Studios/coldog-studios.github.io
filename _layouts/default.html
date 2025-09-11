@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Browser and Google -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="google-site-verification" content="Xnkypqod1SfUGQoBmOg1Fow2g3TySggs4CW5xRYE_jk" />
+
+		<!-- SEO Meta Tags -->
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" />
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+		<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}ColDog Studios, ColDog, ColDog5044{% endif %}" />
+
+		<!-- Robots and SEO -->
+		<meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow{% endif %}" />
+		<meta
+			name="googlebot"
+			content="{% if page.robots %}{{ page.robots }}{% else %}index, follow{% endif %}, max-snippet:160, max-image-preview:large"
+		/>
+		<meta name="bingbot" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow{% endif %}" />
+		<meta name="referrer" content="no-referrer-when-downgrade" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ page.url | absolute_url }}" />
+		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+		<meta
+			property="og:description"
+			content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+		/>
+		<meta property="og:image" content="{{ '/assets/images/cds/wallpaper/cdsWallpaper.png' | absolute_url }}" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="coldogstudios.com" />
+		<meta property="twitter:url" content="{{ page.url | absolute_url }}" />
+		<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+		<meta
+			name="twitter:description"
+			content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+		/>
+		<meta name="twitter:image" content="{{ '/assets/images/cds/wallpaper/cdsWallpaper.png' | absolute_url }}" />
+
+		<!-- Icons & Styling-->
+		<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" />
+		<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+		<link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}" />
+		<link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}" />
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+		<!-- Structured Data -->
+		{% include structured-data.html %}
+
+		<!-- Jekyll SEO Tag -->
+		{% seo %}
+	</head>
+
+	<body>
+		{% include nav.html %}
+
+		<header>
+			<h1>{{ page.header_title | default: page.title | default: "Home" }}</h1>
+			{% if page.header_description %}
+			<p style="font-style: italic">{{ page.header_description }}</p>
+			{% endif %}
+		</header>
+
+		<main> {{ content }} </main>
+
+		{% include footer.html %}
+
+		<!-- Scripts -->
+		<script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+	</body>
+</html>
