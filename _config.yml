@@ -6,6 +6,13 @@ url: "https://www.coldogstudios.com"
 
 # Build settings
 markdown: kramdown
+kramdown:
+    input: GFM
+    auto_ids: true
+    hard_wrap: false
+    syntax_highlighter: rouge
+    parse_block_html: true
+    parse_span_html: true
 highlighter: rouge
 plugins:
     - jekyll-sitemap
@@ -42,9 +49,6 @@ social:
 
 # GitHub Pages settings
 github: [metadata]
-kramdown:
-    input: GFM
-    hard_wrap: false
 future: true
 jailed: false
 theme: null
