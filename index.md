@@ -22,4 +22,4 @@ Stay informed with the latest trends and best practices in cybersecurity. Our bl
 -   Security Tools and Techniques
 -   Real-World Examples
 
-[Visit our blog](/blog/) to learn more and stay updated.
+<!--[Visit our blog](/blog/) to learn more and stay updated.-->
