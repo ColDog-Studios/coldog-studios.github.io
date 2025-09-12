@@ -41,10 +41,7 @@
 		<meta property="twitter:domain" content="coldogstudios.com" />
 		<meta property="twitter:url" content="{{ page.url | absolute_url }}" />
 		<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-		<meta
-			name="twitter:description"
-			content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
-		/>
+		<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 		<meta name="twitter:image" content="{{ '/assets/images/cds/wallpaper/cdsWallpaper.png' | absolute_url }}" />
 
 		<!-- Icons & Styling-->
@@ -53,8 +50,8 @@
 		<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 		<link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}" />
 		<link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}" />
-		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" integrity="sha384-GOYXHybyry86pVlodrPnR4KfuOyLNlur5h6YEcBXDag7n5aeYP6gDT9drT8ltUgk" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha384-rWj9FmWWt3OMqd9vBkWRhFavvVUYalYqGPoMdL1brs/qvvqz88gvLShYa4hKNyqb" crossorigin="anonymous" />
 
 		<!-- Structured Data -->
 		{% include structured-data.html %}
@@ -63,7 +60,7 @@
 		{% seo %}
 	</head>
 
-	<body>
+	<body{% if page.css_class %} class="{{ page.css_class }}"{% endif %}>
 		{% include nav.html %}
 
 		<header>

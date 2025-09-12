@@ -6,12 +6,12 @@ keywords: "ColDog Studios, Contact, Support, Security Services"
 header_title: "Contact Us"
 ---
 
-## <i class="fa-brands fa-github"></i> GitHub {#GitHub .h2}
+## <i class="fa-brands fa-github"></i> GitHub
 
 -   On a repo, use the _Issues_ tab to report a bug, request a feature, ask a question, or report a security vulnerability.
 -   On a repo, use the _Discussions_ tab to ask a question.
 
-## <i class="fa-solid fa-envelope"></i> Email {#Email .h2}
+## <i class="fa-solid fa-envelope"></i> Email
 
 Email us if none of the above applies or the information is personal. We will try to respond within a business day.
 

@@ -6,7 +6,7 @@ keywords: "ColDog Studios, ColDog, ColDog5044"
 header_title: "Home"
 ---
 
-## Security Services {#security-services .h2}
+## Security Services
 
 At ColDog Studios, we offer comprehensive security services to protect your business from cyber threats. Our Security solutions include:
 
@@ -14,7 +14,7 @@ At ColDog Studios, we offer comprehensive security services to protect your busi
 -   Compliance Management
 -   And more
 
-## Cybersecurity Knowledge {#cybersecurity-knowledge .h2}
+## Cybersecurity Knowledge
 
 Stay informed with the latest trends and best practices in cybersecurity. Our blog covers a wide range of topics, including:
 

@@ -6,11 +6,11 @@ keywords: "ColDog Studios, Security Services, Cybersecurity, Managed Services"
 header_title: "Services"
 ---
 
-## Security Services {#MajorHeading .h2}
+## Security Services
 
 At ColDog Studios, we provide comprehensive security services designed to protect your business from evolving cyber threats. Our expert team delivers customized solutions that fit your organization's specific needs and budget.
 
-### Vulnerability Management {#MinorHeading .h3}
+### Vulnerability Management
 
 We identify, assess, and remediate security vulnerabilities in your systems before they can be exploited by malicious actors. Our proactive approach includes:
 
