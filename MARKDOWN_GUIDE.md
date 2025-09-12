@@ -101,6 +101,75 @@ robots: "noindex, nofollow" # Optional, for pages you don't want indexed
 -   Custom styling that Markdown doesn't support
 -   Legacy components that are working well
 
+## Enhanced Code Blocks
+
+The site now supports enhanced code blocks with headers, copy functionality, and file name support.
+
+### Basic Code Blocks
+
+Basic code blocks automatically detect the language and show it in the header:
+
+```javascript
+function hello() {
+	console.log("Hello, World!");
+	return "Hello from JavaScript!";
+}
+```
+
+```python
+def hello():
+    print("Hello, World!")
+    return "Hello from Python!"
+```
+
+```bash
+echo "Hello, World!"
+ls -la
+```
+
+### Code Blocks with File Names
+
+You can specify a filename using Kramdown's attribute syntax:
+
+```css
+.example {
+	color: #333;
+	background: #fff;
+	border-radius: 4px;
+}
+```
+
+{: file='styles.css'}
+
+```json
+{
+	"name": "my-project",
+	"version": "1.0.0",
+	"dependencies": {}
+}
+```
+
+{: file='package.json'}
+
+### Plain Text Code Blocks
+
+Text blocks automatically hide line numbers:
+
+```text
+This is a plain text code block
+without syntax highlighting.
+Perfect for examples and output.
+```
+
+### Features
+
+-   **Copy to Clipboard**: Click the clipboard icon to copy code
+-   **Language Detection**: Automatic language identification and display
+-   **File Name Support**: Use `{: file='filename.ext'}` syntax
+-   **Responsive Design**: Works on all screen sizes
+-   **macOS-style Design**: Elegant header with traffic light dots
+-   **Line Numbers**: Automatic for most languages (hidden for text/console)
+
 ## Custom Blockquotes
 
 The site supports custom blockquotes with prompt styling:

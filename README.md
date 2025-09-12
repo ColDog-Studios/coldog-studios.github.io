@@ -70,7 +70,7 @@ The JavaScript file includes backward compatibility for any pages still using th
 
 ## Custom Blockquotes
 
-The site includes custom-styled blockquotes with prompt variants inspired by the Chirpy theme:
+The site includes custom-styled blockquotes with prompt variants:
 
 ### Basic Blockquote
 
