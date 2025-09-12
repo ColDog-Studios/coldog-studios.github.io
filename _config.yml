@@ -18,6 +18,14 @@ plugins:
     - jekyll-sitemap
     - jekyll-seo-tag
 
+# Search configuration
+simple_search:
+    searchdata_file: "/search.json"
+    search_results_file: "/search-results.html"
+    exclude_files: ["404.md", "robots.txt"]
+    exclude_collections: []
+    exclude_tags: ["noindex", "template", "test"]
+
 # Collections
 collections:
     data:

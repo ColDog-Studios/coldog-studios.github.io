@@ -69,6 +69,90 @@ nav a:hover::after {
 	display: none;
 }
 
+/* Search Box Styling */
+.search-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	background: #001d2b;
+	border-radius: 25px;
+	padding: 0 15px;
+	margin: 0 20px;
+}
+
+.search-box input {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fafafa;
+	padding: 10px;
+	font-size: 16px;
+	width: 250px;
+}
+
+.search-box input::placeholder {
+	color: #ccc;
+}
+
+.search-box .searchBtn {
+	color: #fafafa;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+/* Search Results Dropdown */
+.search-results {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: #001d2b;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	max-height: 400px;
+	overflow-y: auto;
+	z-index: 1000;
+	display: none;
+}
+
+.search-results.show {
+	display: block;
+}
+
+.search-result-item {
+	padding: 10px 15px;
+	border-bottom: 1px solid #333;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.search-result-item:hover {
+	background: #333;
+}
+
+.search-result-item:last-child {
+	border-bottom: none;
+}
+
+.search-result-title {
+	color: #0096dc;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.search-result-excerpt {
+	color: #ccc;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.search-result-excerpt mark {
+	background: #0096dc;
+	color: #fff;
+	padding: 1px 2px;
+	border-radius: 2px;
+}
+
 /* responsive */
 @media screen and (max-width: 1160px) {
 	.nav {
@@ -90,6 +174,20 @@ nav a:hover::after {
 
 	.nav {
 		padding: 15px 20px;
+	}
+
+	.search-box {
+		display: none; /* Hide on mobile to save space */
+	}
+
+	.nav.openSearch .search-box {
+		display: flex;
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.search-box input {
+		width: 100%;
 	}
 
 	.nav .nav-links {

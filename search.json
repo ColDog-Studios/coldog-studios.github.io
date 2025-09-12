@@ -1,0 +1,27 @@
+---
+layout: null
+---
+[
+  {% for page in site.pages %}
+    {% unless page.search_exclude %}
+    {
+      "title": {{ page.title | default: page.name | jsonify }},
+      "excerpt": {{ page.description | default: page.excerpt | strip_html | truncatewords: 20 | jsonify }},
+      "content": {{ page.content | strip_html | jsonify }},
+      "url": {{ page.url | jsonify }},
+      "date": {{ page.date | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endunless %}
+  {% endfor %}
+  {% for post in site.posts %}
+    {% unless post.search_exclude %}
+    ,{
+      "title": {{ post.title | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | truncatewords: 20 | jsonify }},
+      "content": {{ post.content | strip_html | jsonify }},
+      "url": {{ post.url | jsonify }},
+      "date": {{ post.date | jsonify }}
+    }
+    {% endunless %}
+  {% endfor %}
+]
