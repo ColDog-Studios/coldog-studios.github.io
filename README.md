@@ -67,3 +67,40 @@ This site is designed to work with GitHub Pages. Simply push to the main branch 
 ## Legacy Support
 
 The JavaScript file includes backward compatibility for any pages still using the old `<footer-content>` tags, but new pages should use the Jekyll includes system.
+
+## Custom Blockquotes
+
+The site includes custom-styled blockquotes with prompt variants inspired by the Chirpy theme:
+
+### Basic Blockquote
+
+```markdown
+> This is a basic blockquote with left border styling.
+```
+
+### Prompt Blockquotes
+
+Use Kramdown's attribute list syntax to add prompt classes:
+
+```markdown
+> An example showing the `tip` type prompt.
+> {: .prompt-tip }
+
+> An example showing the `info` type prompt.
+> {: .prompt-info }
+
+> An example showing the `warning` type prompt.
+> {: .prompt-warning }
+
+> An example showing the `danger` type prompt.
+> {: .prompt-danger }
+```
+
+Each prompt type has:
+
+-   **Tip**: Light blue background with lightbulb icon
+-   **Info**: Blue background with info icon (rotated)
+-   **Warning**: Yellow background with info icon
+-   **Danger**: Red background with exclamation triangle icon
+
+The prompts include Font Awesome icons and are fully responsive.

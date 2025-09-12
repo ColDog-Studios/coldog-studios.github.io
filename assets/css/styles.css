@@ -214,3 +214,126 @@ body[class*="branding"] main strong,
     scrollbar-width: 0.5vw;
     scrollbar-color: #0096dc transparent; /* Thumb, Track *
 }*/
+
+/* ===== MARK: Custom Blockquotes ===== */
+
+/* CSS Variables for blockquotes */
+:root {
+	--blockquote-border-color: #0096dc;
+	--blockquote-text-color: #555;
+	--prompt-text-color: #333;
+	--prompt-tip-bg: #d1ecf1;
+	--prompt-tip-border: #17a2b8;
+	--prompt-tip-icon: #17a2b8;
+	--prompt-info-bg: #cce7ff;
+	--prompt-info-border: #0096dc;
+	--prompt-info-icon: #0096dc;
+	--prompt-warning-bg: #fff3cd;
+	--prompt-warning-border: #ffc107;
+	--prompt-warning-icon: #856404;
+	--prompt-danger-bg: #f8d7da;
+	--prompt-danger-border: #dc3545;
+	--prompt-danger-icon: #721c24;
+}
+
+/* Basic blockquote styling */
+blockquote {
+	border-left: 0.125rem solid var(--blockquote-border-color);
+	padding-left: 1rem;
+	color: var(--blockquote-text-color);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	font-style: italic;
+}
+
+blockquote > p:last-child {
+	margin-bottom: 0;
+}
+
+/* Prompt blockquotes */
+blockquote[class^="prompt-"] {
+	border-left: 0;
+	position: relative;
+	padding: 1rem 1rem 1rem 3rem;
+	color: var(--prompt-text-color);
+	border-radius: 8px;
+	font-style: normal;
+	margin: 1rem 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+blockquote[class^="prompt-"]::before {
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	text-align: center;
+	width: 3rem;
+	position: absolute;
+	left: 0.25rem;
+	margin-top: 0.4rem;
+	font-size: 1.2rem;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Tip prompt */
+blockquote.prompt-tip {
+	background: var(--prompt-tip-bg);
+	border: 1px solid var(--prompt-tip-border);
+}
+
+blockquote.prompt-tip::before {
+	content: "\f0eb"; /* lightbulb icon */
+	color: var(--prompt-tip-icon);
+	font-weight: 400; /* regular style for lightbulb */
+}
+
+/* Info prompt */
+blockquote.prompt-info {
+	background: var(--prompt-info-bg);
+	border: 1px solid var(--prompt-info-border);
+}
+
+blockquote.prompt-info::before {
+	content: "\f05a"; /* info-circle icon */
+	color: var(--prompt-info-icon);
+	transform: rotate(180deg);
+}
+
+/* Warning prompt */
+blockquote.prompt-warning {
+	background: var(--prompt-warning-bg);
+	border: 1px solid var(--prompt-warning-border);
+}
+
+blockquote.prompt-warning::before {
+	content: "\f05a"; /* info-circle icon */
+	color: var(--prompt-warning-icon);
+}
+
+/* Danger prompt */
+blockquote.prompt-danger {
+	background: var(--prompt-danger-bg);
+	border: 1px solid var(--prompt-danger-border);
+}
+
+blockquote.prompt-danger::before {
+	content: "\f071"; /* exclamation-triangle icon */
+	color: var(--prompt-danger-icon);
+}
+
+/* Responsive adjustments for blockquotes */
+@media (max-width: 768px) {
+	blockquote {
+		padding-left: 0.75rem;
+	}
+
+	blockquote[class^="prompt-"] {
+		padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+	}
+
+	blockquote[class^="prompt-"]::before {
+		width: 2.5rem;
+		font-size: 1rem;
+		margin-top: 0.2rem;
+	}
+}

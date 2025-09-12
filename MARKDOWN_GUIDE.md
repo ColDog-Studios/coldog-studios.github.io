@@ -101,4 +101,65 @@ robots: "noindex, nofollow" # Optional, for pages you don't want indexed
 -   Custom styling that Markdown doesn't support
 -   Legacy components that are working well
 
+## Custom Blockquotes
+
+The site supports custom blockquotes with prompt styling:
+
+### Basic Blockquote
+
+```markdown
+> This is a standard blockquote with left border styling.
+```
+
+> This is a standard blockquote with left border styling.
+
+### Prompt Blockquotes
+
+#### Tip Prompt
+
+```markdown
+> Use this for helpful tips and suggestions.
+> {: .prompt-tip }
+```
+
+> Use this for helpful tips and suggestions.
+> {: .prompt-tip }
+
+#### Info Prompt
+
+```markdown
+> Use this for informational content.
+> {: .prompt-info }
+```
+
+> Use this for informational content.
+> {: .prompt-info }
+
+#### Warning Prompt
+
+```markdown
+> Use this for warnings and important notes.
+> {: .prompt-warning }
+```
+
+> Use this for warnings and important notes.
+> {: .prompt-warning }
+
+#### Danger Prompt
+
+```markdown
+> Use this for errors and critical information.
+> {: .prompt-danger }
+```
+
+> Use this for errors and critical information.
+> {: .prompt-danger }
+
+### Usage Notes
+
+-   Use Kramdown's attribute list syntax `{: .class-name }`
+-   Each prompt includes appropriate Font Awesome icons
+-   Colors match your site's design system
+-   Fully responsive design
+
 Remember: You can always mix Markdown and HTML in the same file!
