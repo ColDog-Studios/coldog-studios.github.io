@@ -1,5 +1,4 @@
 /* Footer Menu */
-
 footer {
 	position: relative; // Needed for the ::before line to position correctly
 	background: $primary-color;
@@ -17,9 +16,8 @@ footer {
 	}
 
 	.content {
-		max-width: 1250px;
-		margin: auto;
-		padding: 20px $spacing-xl $spacing-xl $spacing-xl !important;
+		@include container; // Use the same container mixin as main
+		padding: 20px 0 $spacing-xl 0 !important;
 
 		.top {
 			@include flex-between;
@@ -181,9 +179,8 @@ footer {
 		background: $background-dark;
 
 		.bottom_text {
-			max-width: 1250px;
-			margin: auto;
-			padding: 20px $spacing-xl;
+			@include container; // Use the same container mixin as main content
+			padding: 20px 0;
 			@include flex-between;
 
 			span,
