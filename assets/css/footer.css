@@ -11,7 +11,7 @@ footer::before {
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 100px;
+	top: 120px;
 	height: 1px;
 	width: 100%;
 	background: #afafb6;
@@ -20,28 +20,34 @@ footer::before {
 footer .content {
 	max-width: 1250px;
 	margin: auto;
-	padding: 30px 40px 40px 40px;
+	padding: 20px 40px 40px 40px !important;
 }
 
 footer .content .top {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 50px;
+	margin-bottom: 40px !important;
+	padding-bottom: 20px !important;
 }
 
 .logo_name {
-	font-family: Nunito, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-weight: 600;
 }
 
 .content .top .logo-details {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 	color: #fafafa;
 	font-size: 30px;
 }
 
 .content .top .media-icons {
 	display: flex;
+	align-items: center;
+	padding: 20px 0;
 }
 
 .content .top .media-icons a {
