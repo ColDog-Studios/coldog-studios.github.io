@@ -58,8 +58,6 @@ Official wallpaper for desktop and mobile.
 
 [<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/wallpaper/cdsWallpaper.png){: .btn}
 
----
-
 ## ColDog Locker
 
 ### Official Icon
@@ -118,8 +116,6 @@ Official dark theme wallpaper for desktop and mobile.
 
 [<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlWallpaperDark.png){: .btn}
 
----
-
 ## Brand Colors
 
 ### ColDog Studios Colors
@@ -153,8 +149,6 @@ Use as the primary background color and for light UI elements.
 **#333333** | **RGB(51, 51, 51)** | **RGBA(51, 51, 51, 1)**
 
 Use for body text and secondary content on light backgrounds.
-
----
 
 ## Usage Guidelines
 
