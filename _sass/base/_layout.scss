@@ -1,0 +1,40 @@
+/* Layout and general page structure styles */
+
+/* Global reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding-top: $nav-padding;
+	background: $background-main;
+}
+
+main {
+	@include container;
+	height: 100%;
+	padding: 0 0 4vh 0;
+}
+
+section {
+	margin-bottom: $spacing-xl;
+}
+
+header {
+	@include container;
+	text-align: center;
+	margin-bottom: 14px;
+
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(90deg, $accent-color, transparent);
+	margin: $spacing-xl 0;
+}

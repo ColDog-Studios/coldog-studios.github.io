@@ -1,0 +1,95 @@
+/* Typography styles */
+
+/* ===== Google Font Import - Roboto, Source Code Pro, Montserrat ===== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Typography base styles */
+h1,
+h2,
+h3,
+h4 {
+	@include heading-base;
+}
+
+p,
+li {
+	@include body-text;
+}
+
+h1 {
+	font-size: $font-size-h1;
+	margin-bottom: 14px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: $font-size-h2;
+	margin: $spacing-xl 0 30px 0;
+	padding-bottom: 15px;
+	border-bottom: 3px solid $accent-color;
+	color: $primary-color;
+}
+
+h3 {
+	font-size: $font-size-h3;
+	margin: 30px 0 20px 0;
+	color: $accent-color;
+}
+
+h4 {
+	font-size: $font-size-h4;
+	margin: 25px 0 15px 0;
+	color: $primary-color;
+	font-weight: 600;
+}
+
+p {
+	margin-bottom: 14px;
+}
+
+main {
+	ul,
+	ol {
+		padding-left: $spacing-xl;
+		margin-bottom: 14px;
+		line-height: 1.25;
+	}
+
+	li {
+		line-height: 1.25;
+		margin-bottom: $spacing-xs;
+	}
+}
+
+a {
+	color: $accent-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		transition: all 400ms ease-in-out;
+	}
+}
+
+/* Image styling - branding page only */
+body[class*="branding"] main img,
+.branding-page main img {
+	max-width: 100%;
+	height: auto;
+	margin: 15px 0;
+	border-radius: $border-radius-md;
+	box-shadow: $shadow-medium;
+}
+
+/* Strong text styling - branding page only */
+body[class*="branding"] main strong,
+.branding-page main strong {
+	color: $primary-color;
+	font-family: $font-code;
+	background: $background-light;
+	padding: 2px 6px;
+	border-radius: $border-radius-sm;
+	font-size: $font-size-small;
+}

@@ -1,0 +1,81 @@
+/* Custom blockquotes and prompt styles */
+
+/* CSS Variables for blockquotes - keeping as CSS custom properties for browser compatibility */
+:root {
+	--blockquote-border-color: #{$accent-color};
+	--blockquote-text-color: #{$text-medium};
+	--prompt-text-color: #{$text-dark};
+	--prompt-tip-bg: #d1ecf1;
+	--prompt-tip-border: #{$brand-secondary};
+	--prompt-tip-icon: #{$brand-secondary};
+	--prompt-info-bg: #cce7ff;
+	--prompt-info-border: #{$accent-color};
+	--prompt-info-icon: #{$accent-color};
+	--prompt-warning-bg: #fff3cd;
+	--prompt-warning-border: #ffc107;
+	--prompt-warning-icon: #856404;
+	--prompt-danger-bg: #f8d7da;
+	--prompt-danger-border: #dc3545;
+	--prompt-danger-icon: #721c24;
+}
+
+/* Basic blockquote styling */
+blockquote {
+	border-left: 0.125rem solid var(--blockquote-border-color);
+	padding-left: 1rem;
+	color: var(--blockquote-text-color);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	font-style: italic;
+
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Prompt blockquotes */
+blockquote[class^="prompt-"] {
+	@include prompt-box(var(--prompt-info-bg), var(--prompt-info-border), var(--prompt-info-icon));
+}
+
+/* Specific prompt types */
+blockquote.prompt-tip {
+	@include prompt-box(var(--prompt-tip-bg), var(--prompt-tip-border), var(--prompt-tip-icon), "\f0eb");
+
+	&::before {
+		font-weight: 400; // regular style for lightbulb
+	}
+}
+
+blockquote.prompt-info {
+	@include prompt-box(var(--prompt-info-bg), var(--prompt-info-border), var(--prompt-info-icon));
+
+	&::before {
+		transform: rotate(180deg);
+	}
+}
+
+blockquote.prompt-warning {
+	@include prompt-box(var(--prompt-warning-bg), var(--prompt-warning-border), var(--prompt-warning-icon));
+}
+
+blockquote.prompt-danger {
+	@include prompt-box(var(--prompt-danger-bg), var(--prompt-danger-border), var(--prompt-danger-icon), "\f071");
+}
+
+/* Responsive adjustments for blockquotes */
+@include respond-to(sm) {
+	blockquote {
+		padding-left: 0.75rem;
+
+		&[class^="prompt-"] {
+			padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+
+			&::before {
+				width: 2.5rem;
+				font-size: 1rem;
+				margin-top: 0.2rem;
+			}
+		}
+	}
+}

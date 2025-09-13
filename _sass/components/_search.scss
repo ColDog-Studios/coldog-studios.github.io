@@ -1,0 +1,117 @@
+/* Search functionality styles */
+
+.search-box {
+	position: relative;
+	@include flex-center;
+	background: $background-dark;
+	border-radius: $border-radius-lg;
+	padding: 0 15px;
+	margin: 0 20px;
+
+	input {
+		background: transparent;
+		border: none;
+		outline: none;
+		color: $text-light;
+		padding: 10px;
+		font-size: $font-size-body;
+		width: 250px;
+
+		&::placeholder {
+			color: $text-muted;
+		}
+	}
+
+	.searchBtn {
+		color: $text-light;
+		cursor: pointer;
+		font-size: $font-size-body;
+	}
+}
+
+.search-results {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: $background-dark;
+	border-radius: $border-radius-md;
+	box-shadow: $shadow-heavy;
+	max-height: 400px;
+	overflow-y: auto;
+	z-index: $z-search-results;
+	display: none;
+
+	&.show {
+		display: block;
+	}
+
+	.search-result-item {
+		padding: 10px 15px;
+		border-bottom: 1px solid #333;
+		cursor: pointer;
+		transition: background $transition-fast;
+
+		&:hover {
+			background: #333;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.search-result-title {
+		color: $accent-color !important;
+		font-weight: 600 !important;
+		font-family: $font-heading !important;
+		margin-bottom: 5px;
+		font-size: $font-size-body !important;
+		display: block;
+	}
+
+	.search-result-excerpt {
+		color: $text-muted !important;
+		font-size: $font-size-small !important;
+		font-family: $font-body !important;
+		line-height: 1.4 !important;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	// Consistent highlighting for all search results
+	mark {
+		background: $accent-color !important;
+		color: white !important;
+		padding: 1px 2px;
+		border-radius: 2px;
+		font-weight: normal !important;
+	}
+
+	.search-result-excerpt mark {
+		background: $accent-color !important;
+		color: white !important;
+		font-family: $font-body !important;
+		padding: 1px 2px;
+		border-radius: 2px;
+		font-weight: normal !important;
+	}
+}
+
+/* Search responsive adjustments */
+@include respond-to(sm) {
+	.search-box {
+		display: none; // Hide on mobile to save space
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.nav.openSearch .search-box {
+		display: flex;
+		width: 100%;
+		margin: 20px 0;
+	}
+}

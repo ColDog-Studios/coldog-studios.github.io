@@ -1,0 +1,29 @@
+/* Custom scrollbar styles */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+	width: 0.6vw;
+
+	&-track {
+		background: transparent;
+	}
+
+	&-thumb {
+		background: #222;
+		border-radius: 100vw;
+
+		&:hover {
+			background: $accent-color;
+		}
+
+		&:active {
+			background: $accent-color-hover;
+		}
+	}
+}
+
+/* Firefox - commented out for now
+* {
+    scrollbar-width: 0.5vw;
+    scrollbar-color: $accent-color transparent;
+}*/

@@ -1,0 +1,74 @@
+/* SCSS Variables */
+
+// Colors
+$primary-color: #002e44;
+$accent-color: #0096dc;
+$accent-color-hover: #0077b6;
+$text-dark: #333;
+$text-medium: #555;
+$text-light: #fafafa;
+$text-muted: #ccc;
+$background-light: #f8f9fa;
+$background-main: #fafafa;
+$background-dark: #001d2b;
+
+// Brand Colors
+$brand-primary: #002e44;
+$brand-accent: #0096dc;
+$brand-secondary: #17a2b8;
+
+// Typography
+$font-heading: "Montserrat", Arial, Helvetica, sans-serif;
+$font-body: "Roboto", Arial, Helvetica, sans-serif;
+$font-code: "Source Code Pro", monospace;
+
+// Font Sizes
+$font-size-h1: 36px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-body: 16px;
+$font-size-small: 14px;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+
+// Layout
+$container-width: 1024px;
+$container-tablet: 720px;
+$container-mobile: 375px;
+$nav-height: 100px;
+$nav-padding: 120px;
+
+// Borders & Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 25px;
+$border-radius-xl: 0.8vw;
+
+// Shadows
+$shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-heavy: 0 4px 10px rgba(0, 0, 0, 0.3);
+$shadow-button: 0 4px 12px rgba(0, 150, 220, 0.3);
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-medium: 0.3s;
+$transition-slow: 0.4s;
+$transition-extra-slow: 0.6s;
+
+// Breakpoints
+$breakpoint-xl: 1160px;
+$breakpoint-lg: 950px;
+$breakpoint-md: 900px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 700px;
+
+// Z-index
+$z-nav: 100;
+$z-search-results: 1000;

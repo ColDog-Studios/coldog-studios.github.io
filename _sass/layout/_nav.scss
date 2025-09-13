@@ -1,0 +1,124 @@
+/* Navigation Menu */
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $nav-height;
+	padding: 0px 200px;
+	background: $primary-color;
+	box-shadow: $shadow-heavy;
+	@include flex-center;
+	justify-content: flex-start;
+
+	.nav-links {
+		@include flex-center;
+		column-gap: $spacing-xl;
+		list-style: none;
+		margin-left: auto;
+		margin-right: 20px;
+
+		a {
+			transition: all $transition-fast linear;
+		}
+	}
+
+	&.openSearch .nav-links a {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.navOpenBtn,
+	.navCloseBtn {
+		display: none;
+	}
+}
+
+nav a {
+	color: $text-light;
+	font-size: 18px;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	transition: color 0.25s ease;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $text-light;
+		transition: transform 0.25s ease-out;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+	}
+}
+
+.logo {
+	width: 80px;
+	height: 80px;
+}
+
+/* Responsive navigation */
+@include respond-to(xl) {
+	.nav {
+		padding: 15px 100px;
+	}
+}
+
+@include respond-to(lg) {
+	.nav {
+		padding: 15px 50px;
+	}
+}
+
+@include respond-to(sm) {
+	.nav {
+		padding: 15px 20px;
+
+		.navOpenBtn,
+		.navCloseBtn {
+			display: block;
+		}
+
+		.nav-links {
+			position: fixed;
+			top: 0;
+			left: -100vw;
+			height: 100%;
+			width: 100%;
+			padding-top: $nav-height;
+			row-gap: 30px;
+			flex-direction: column;
+			background-color: $background-dark;
+			box-shadow: $shadow-medium;
+			transition: all $transition-slow ease;
+			z-index: $z-nav;
+		}
+
+		&.openNav .nav-links {
+			left: 0;
+		}
+
+		.navOpenBtn {
+			color: $text-light;
+			font-size: 24px;
+			cursor: pointer;
+		}
+
+		.navCloseBtn {
+			position: absolute;
+			top: 32px;
+			right: 32px;
+			color: $text-light;
+			font-size: 24px;
+			cursor: pointer;
+		}
+	}
+}
