@@ -1,11 +1,10 @@
 /* Footer Menu */
 
 footer {
-	position: relative;
+	position: relative; // Needed for the ::before line to position correctly
 	background: $primary-color;
 	width: 100%;
-	bottom: 0;
-	left: 0;
+	margin-top: auto; // This pushes footer to bottom when using flexbox
 
 	&::before {
 		content: "";

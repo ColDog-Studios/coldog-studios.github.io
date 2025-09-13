@@ -10,12 +10,16 @@
 body {
 	padding-top: $nav-padding;
 	background: $background-main;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 main {
 	@include container;
-	height: 100%;
+	flex: 1; // This makes main grow to fill available space
 	padding: 0 0 4vh 0;
+	min-height: calc(100vh - #{$nav-padding} - 250px); // Ensure minimum height accounting for nav and footer
 }
 
 section {

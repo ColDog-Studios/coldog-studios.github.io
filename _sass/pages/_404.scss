@@ -1,0 +1,83 @@
+/* 404 Error Page Styles */
+
+.error-page {
+	main {
+		// Remove the min-height since it's now handled globally
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.error-404-content {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: $spacing-xl;
+
+		.error-message {
+			p {
+				font-size: 18px;
+				line-height: 1.6;
+				margin-bottom: $spacing-lg;
+				color: $text-dark;
+			}
+
+			a {
+				color: $accent-color;
+				text-decoration: none;
+				font-weight: 500;
+
+				&:hover {
+					text-decoration: underline;
+					color: $accent-color-hover;
+				}
+
+				&.btn {
+					@include button-base;
+					margin: $spacing-md $spacing-sm;
+					text-decoration: none !important;
+
+					&:hover {
+						text-decoration: none !important;
+					}
+				}
+
+				i {
+					margin-right: $spacing-sm;
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+
+	header {
+		h1 {
+			color: $primary-color;
+			font-size: $font-size-h1 + 8px; // Make it slightly larger
+			margin-bottom: $spacing-md;
+		}
+	}
+}
+
+// Responsive adjustments
+@include respond-to(sm) {
+	.error-page {
+		main {
+			min-height: calc(100vh - #{$nav-padding} - 150px);
+			padding: $spacing-md;
+		}
+
+		.error-404-content {
+			padding: $spacing-md;
+
+			.error-message p {
+				font-size: $font-size-body;
+			}
+		}
+
+		header h1 {
+			font-size: $font-size-h2 !important;
+		}
+	}
+}
