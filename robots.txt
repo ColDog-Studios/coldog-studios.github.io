@@ -1,25 +1,20 @@
-# Allow Googlebot-Image to index images
-User-agent: Googlebot-Image
-Disallow: /
-Allow: /assets/images/
-
-# Google Search Bot
+# Major Search Engines (Google, Bing, Yahoo, DuckDuckGo, Yandex)
 User-agent: Googlebot
-Disallow: /404.html
-Disallow: /branding/
-Disallow: /legal/
-Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
-
-# Other search engines follow same rules
 User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: YandexBot
 Disallow: /404.html
-Disallow: /branding/
+Disallow: /legal/
+Allow: /assets/
+
+# Google Image Bot - allow images with context
+User-agent: Googlebot-Image
+Disallow: /404.html
 Disallow: /legal/
 Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
+Allow: /projects/
+Allow: /services/
 
 # Block AI Training Bots
 User-agent: GPTBot
@@ -37,7 +32,6 @@ Disallow: /
 # All other bots
 User-agent: *
 Disallow: /404.html
-Disallow: /branding/
 Disallow: /legal/
 
 # Sitemap location
