@@ -16,7 +16,7 @@ async function initApp() {
 
 	// Load commons functionality from same directory
 	try {
-		const module = await import("./commons.js");
+		await import("./commons.js");
 		console.log("ColDog Studios commons loaded successfully");
 	} catch (error) {
 		console.error("Failed to load commons:", error);
