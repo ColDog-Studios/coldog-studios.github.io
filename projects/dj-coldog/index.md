@@ -30,31 +30,32 @@ Music from Phases 1&2:
 
 10 Tracks + Bonus:
 
--   On a Journey
--   Get Ready
--   The Return
--   The Rising
--   Lightspeed
--   Static
--   Stage Lights
--   Up-Down
--   High and Low
--   Day N' Night
--   Here we Are (Bonus)
+1.  On a Journey
+2.  Get Ready
+3.  The Return
+4.  The Rising
+5.  Lightspeed
+6.  Static
+7.  Stage Lights
+8.  Up-Down
+9.	High and Low
+10. Day N' Night
+11. Here we Are (Bonus)
 
 ### The First Dog
 
-9 Tracks:
+10 Tracks:
 
--   Bacon
--   DJ ColDog
--   Friend or Foe (feat. Speedy C)
--   Golf
--   Outerspace (feat. Speedy C)
--   xxxxxx
--   Life
--   Sky Dreams
--   Cookie Monster
+1.  Bacon
+2.  DJ ColDog
+3.  Friend or Foe (feat. Speedy C)
+4.  Golf
+5.  Outerspace (feat. Speedy C)
+6.  [Redacted]
+7.  Life
+8. 	Late Nites
+9.  Sky Dreams
+10. Cookie Monster
 
 ## EPs
 
