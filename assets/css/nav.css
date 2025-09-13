@@ -17,7 +17,7 @@
 }
 
 .nav {
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 nav a {
@@ -53,6 +53,8 @@ nav a:hover::after {
 .nav .nav-links {
 	column-gap: 40px;
 	list-style: none;
+	margin-left: auto;
+	margin-right: 20px;
 }
 
 .nav .nav-links a {
@@ -135,22 +137,40 @@ nav a:hover::after {
 }
 
 .search-result-title {
-	color: #0096dc;
-	font-weight: 600;
+	color: #0096dc !important;
+	font-weight: 600 !important;
+	font-family: Montserrat, Arial, Helvetica, sans-serif !important;
 	margin-bottom: 5px;
+	font-size: 16px !important;
+	display: block;
 }
 
 .search-result-excerpt {
-	color: #ccc;
-	font-size: 14px;
-	line-height: 1.4;
+	color: #ccc !important;
+	font-size: 14px !important;
+	font-family: Roboto, Arial, Helvetica, sans-serif !important;
+	line-height: 1.4 !important;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+/* Consistent highlighting for all search results */
+.search-results mark {
+	background: #0096dc !important;
+	color: #fff !important;
+	padding: 1px 2px;
+	border-radius: 2px;
+	font-weight: normal !important;
 }
 
 .search-result-excerpt mark {
-	background: #0096dc;
-	color: #fff;
+	background: #0096dc !important;
+	color: #fff !important;
+	font-family: Roboto, Arial, Helvetica, sans-serif !important;
 	padding: 1px 2px;
 	border-radius: 2px;
+	font-weight: normal !important;
 }
 
 /* responsive */
