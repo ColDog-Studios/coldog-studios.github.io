@@ -16,7 +16,7 @@ css_class: "branding-page"
 
 **ColDog Studios Icon** - Official ColDog Studios icon for use in applications and small displays.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/icon/cdsIcon.png){: .btn}
+<a href="/assets/images/cds/icon/cdsIcon.png" download="ColDog-Studios-Icon.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 ---
 
@@ -28,7 +28,7 @@ css_class: "branding-page"
 
 Primary logo with transparent background for light backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/logo/cdsLogo.png){: .btn}
+<a href="/assets/images/cds/logo/cdsLogo.png" download="ColDog-Studios-Logo-Clear.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 #### ColDog Studios Logo - Light
 
@@ -36,7 +36,7 @@ Primary logo with transparent background for light backgrounds.
 
 Light variant logo for use on dark backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/logo/cdsLogo-dark.png){: .btn}
+<a href="/assets/images/cds/logo/cdsLogo-dark.png" download="ColDog-Studios-Logo-Light.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 #### ColDog Studios Logo Dark
 
@@ -44,7 +44,7 @@ Light variant logo for use on dark backgrounds.
 
 Dark variant logo for use on light backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/logo/cdsLogo-dark-2000.png){: .btn}
+<a href="/assets/images/cds/logo/cdsLogo-dark-2000.png" download="ColDog-Studios-Logo-Dark.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 ---
 
@@ -56,7 +56,7 @@ Dark variant logo for use on light backgrounds.
 
 Official wallpaper for desktop and mobile.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cds/wallpaper/cdsWallpaper.png){: .btn}
+<a href="/assets/images/cds/wallpaper/cdsWallpaper.png" download="ColDog-Studios-Wallpaper.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 ## ColDog Locker
 
@@ -64,9 +64,11 @@ Official wallpaper for desktop and mobile.
 
 ![ColDog Locker Icon](/assets/images/cdl/cdlIcon.png)
 
-**CDL Icon** - Official ColDog Locker icon for use in applications and small displays.
+**ColDog Locker Icon** - Official ColDog Locker icon for use in applications and small displays.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlIcon.png){: .btn}
+<a href="/assets/images/cdl/cdlIcon.png" download="ColDog-Locker-Icon.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
+
+<!--
 
 ---
 
@@ -78,7 +80,7 @@ Official wallpaper for desktop and mobile.
 
 Primary logo with transparent background for light backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlLogoClear.png){: .btn}
+<a href="/assets/images/cdl/cdlLogoClear.png" download="ColDog-Locker-Logo-Clear.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 #### CDL Logo Light
 
@@ -86,7 +88,7 @@ Primary logo with transparent background for light backgrounds.
 
 Light variant logo for use on dark backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlLogoLite.png){: .btn}
+<a href="/assets/images/cdl/cdlLogoLite.png" download="ColDog-Locker-Logo-Light.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 #### CDL Logo Dark
 
@@ -94,7 +96,7 @@ Light variant logo for use on dark backgrounds.
 
 Dark variant logo for use on light backgrounds.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlLogoDark.png){: .btn}
+<a href="/assets/images/cdl/cdlLogoDark.png" download="ColDog-Locker-Logo-Dark.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 ---
 
@@ -106,7 +108,7 @@ Dark variant logo for use on light backgrounds.
 
 Official light theme wallpaper for desktop and mobile.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlWallpaperLite.png){: .btn}
+<a href="/assets/images/cdl/cdlWallpaperLite.png" download="ColDog-Locker-Wallpaper-Light.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
 
 #### CDL Wallpaper Dark
 
@@ -114,7 +116,9 @@ Official light theme wallpaper for desktop and mobile.
 
 Official dark theme wallpaper for desktop and mobile.
 
-[<i class="fa-solid fa-down-long"></i> Download PNG](/assets/images/cdl/cdlWallpaperDark.png){: .btn}
+<a href="/assets/images/cdl/cdlWallpaperDark.png" download="ColDog-Locker-Wallpaper-Dark.png" class="btn"><i class="fa-solid fa-down-long"></i> Download PNG</a>
+
+-->
 
 ## Brand Colors
 
