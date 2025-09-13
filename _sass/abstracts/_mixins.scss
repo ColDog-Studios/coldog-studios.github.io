@@ -36,6 +36,18 @@
 	font-weight: 600;
 	transition: all $transition-medium ease;
 
+	/* Responsive button font sizing */
+	@include respond-to(md) {
+		font-size: 16px; /* Reduce on medium screens */
+		padding: $spacing-sm $spacing-md; /* Reduce padding too */
+	}
+
+	@include respond-to(sm) {
+		font-size: 14px; /* Further reduce on mobile */
+		padding: $spacing-sm $spacing-md;
+		gap: $spacing-xs;
+	}
+
 	&:hover {
 		background-color: $hover-bg;
 		transform: translateY(-2px);
@@ -53,6 +65,16 @@
 
 // Responsive breakpoints
 @mixin respond-to($breakpoint) {
+	@if $breakpoint == xxxl {
+		@media screen and (max-width: $breakpoint-xxxl) {
+			@content;
+		}
+	}
+	@if $breakpoint == xxl {
+		@media screen and (max-width: $breakpoint-xxl) {
+			@content;
+		}
+	}
 	@if $breakpoint == xl {
 		@media screen and (max-width: $breakpoint-xl) {
 			@content;
@@ -96,15 +118,31 @@
 
 // Container
 @mixin container {
-	width: $container-width;
+	max-width: $container-width; /* Use max-width instead of width */
+	width: 100%; /* Allow it to be smaller if needed */
 	margin: 0 auto;
+	padding: 0 40px; /* Increased padding to prevent edge-to-edge content */
+
+	@include respond-to(xxl) {
+		padding: 0 30px; /* Reduce padding on smaller desktop screens */
+	}
+
+	@include respond-to(xl) {
+		padding: 0 25px; /* Further reduce on laptop screens */
+	}
+
+	@include respond-to(lg) {
+		padding: 0 20px; /* Medium laptop screens */
+	}
 
 	@include respond-to(md) {
-		width: $container-tablet;
+		max-width: $container-tablet;
+		padding: 0 20px; /* Keep reasonable padding on tablets */
 	}
 
 	@include respond-to(xs) {
-		width: $container-mobile;
+		max-width: $container-mobile;
+		padding: 0 15px; /* Minimal padding on mobile */
 	}
 }
 

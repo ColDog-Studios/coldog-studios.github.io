@@ -1,6 +1,5 @@
 /**
  * ColDog Studios Website Entry Point
- * Following Chirpy theme JavaScript structure
  */
 
 console.log("Scripts.js loaded!");

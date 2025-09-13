@@ -45,8 +45,88 @@ h4 {
 	font-weight: 600;
 }
 
+/* Responsive typography */
+@include respond-to(md) {
+	h1 {
+		font-size: 28px; /* Reduced from 36px */
+		margin-bottom: 12px;
+	}
+
+	h2 {
+		font-size: 24px; /* Reduced from 32px */
+		margin: $spacing-lg 0 20px 0;
+		padding-bottom: 12px;
+	}
+
+	h3 {
+		font-size: 20px; /* Reduced from 24px */
+		margin: 20px 0 15px 0;
+	}
+
+	h4 {
+		font-size: 16px; /* Reduced from 18px */
+		margin: 15px 0 10px 0;
+	}
+}
+
+@include respond-to(sm) {
+	h1 {
+		font-size: 22px; /* Further reduced for mobile */
+		margin-bottom: 10px;
+		word-wrap: break-word; /* Prevent overflow */
+		hyphens: auto; /* Enable hyphenation */
+	}
+
+	h2 {
+		font-size: 20px; /* Further reduced for mobile */
+		margin: $spacing-md 0 15px 0;
+		padding-bottom: 8px;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	h3 {
+		font-size: 18px; /* Further reduced for mobile */
+		margin: 15px 0 10px 0;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	h4 {
+		font-size: 16px; /* Keep same as md */
+		margin: 12px 0 8px 0;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+}
+
 p {
 	margin-bottom: 14px;
+}
+
+/* Responsive body text */
+@include respond-to(sm) {
+	p,
+	li {
+		font-size: 15px; /* Slightly reduce body text on mobile */
+		line-height: 1.5; /* Adjust line height for better readability */
+	}
+
+	/* Ensure long words don't overflow */
+	p,
+	li,
+	span,
+	a {
+		word-wrap: break-word;
+		word-break: break-word;
+		hyphens: auto;
+	}
+
+	/* Prevent any text from overflowing horizontally */
+	* {
+		max-width: 100%;
+		overflow-wrap: break-word;
+	}
 }
 
 main {

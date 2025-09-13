@@ -38,7 +38,7 @@ $spacing-lg: 32px;
 $spacing-xl: 40px;
 
 // Layout
-$container-width: 1024px;
+$container-width: 960px; /* Reduced from 1024px to work better on smaller screens */
 $container-tablet: 720px;
 $container-mobile: 375px;
 $nav-height: 100px;
@@ -63,6 +63,8 @@ $transition-slow: 0.4s;
 $transition-extra-slow: 0.6s;
 
 // Breakpoints
+$breakpoint-xxxl: 1280px;
+$breakpoint-xxl: 1200px;
 $breakpoint-xl: 1160px;
 $breakpoint-lg: 950px;
 $breakpoint-md: 900px;

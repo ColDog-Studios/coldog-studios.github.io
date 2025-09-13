@@ -17,11 +17,11 @@ footer {
 
 	.content {
 		@include container; // Use the same container mixin as main
-		padding: 20px 0 $spacing-xl 0 !important;
+		padding: 20px 0px !important;
 
 		.top {
 			@include flex-between;
-			margin-bottom: $spacing-xl !important;
+			margin-bottom: 40px !important;
 			padding-bottom: 20px !important;
 
 			.logo-details {
@@ -29,6 +29,19 @@ footer {
 				gap: 12px;
 				color: $text-light;
 				font-size: 30px;
+
+				/* Responsive font sizing for logo */
+				@include respond-to(md) {
+					font-size: 24px; /* Reduce on medium screens */
+					gap: 10px;
+				}
+
+				@include respond-to(xs) {
+					font-size: 20px; /* Further reduce on mobile at 700px */
+					gap: 8px;
+					flex-direction: column; /* Stack vertically only at 700px and below */
+					text-align: center;
+				}
 			}
 
 			.media-icons {
@@ -95,6 +108,7 @@ footer {
 
 			.box {
 				width: calc(100% / 5 - 10px);
+				margin-bottom: 20px;
 
 				.link_category {
 					color: $text-light;
@@ -102,6 +116,17 @@ footer {
 					font-weight: 400;
 					margin-bottom: 10px;
 					position: relative;
+
+					/* Responsive font sizing for link categories */
+					@include respond-to(md) {
+						font-size: 16px; /* Reduce on medium screens */
+						margin-bottom: 8px;
+					}
+
+					@include respond-to(sm) {
+						font-size: 14px; /* Further reduce on mobile */
+						margin-bottom: 6px;
+					}
 
 					&::before {
 						content: "";
@@ -180,7 +205,7 @@ footer {
 
 		.bottom_text {
 			@include container; // Use the same container mixin as main content
-			padding: 20px 0;
+			padding: 20px 0px;
 			@include flex-between;
 
 			span,
@@ -260,12 +285,26 @@ footer {
 	footer {
 		position: relative;
 
+		/* Use similar layout to 520px for screens 700px and below */
+		&::before {
+			top: 203px; /* Position horizontal line to accommodate vertical layout */
+		}
+
 		.content {
-			.top .media-icons a {
-				height: 35px;
-				width: 35px;
-				font-size: $font-size-small;
-				line-height: 35px;
+			.top {
+				flex-direction: column; /* Stack logo and social icons vertically */
+
+				.media-icons {
+					margin-top: $font-size-body;
+					padding: 0px;
+
+					a {
+						height: 35px;
+						width: 35px;
+						font-size: $font-size-small;
+						line-height: 35px;
+					}
+				}
 			}
 
 			.link-boxes {
@@ -291,7 +330,7 @@ footer {
 @media (max-width: 520px) {
 	footer {
 		&::before {
-			top: 145px;
+			top: 203px; /* Increased from 145px to accommodate vertical layout */
 		}
 
 		.content {
@@ -300,6 +339,7 @@ footer {
 
 				.media-icons {
 					margin-top: $font-size-body;
+					padding: 0px;
 				}
 			}
 
