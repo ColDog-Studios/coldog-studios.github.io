@@ -3,26 +3,26 @@ layout: null
 search_exclude: true
 ---
 [
-  {% for page in site.pages %}
-    {% unless page.search_exclude %}
+  {% assign filtered_pages = site.pages | where_exp: "page", "page.search_exclude != true and page.url != '/sitemap.xml' and page.url != '/feed.xml' and page.url != '/search.json'" %}
+  {% assign filtered_posts = site.posts | where_exp: "post", "post.search_exclude != true" %}
+  
+  {% for page in filtered_pages %}
     {
       "title": {{ page.title | default: page.name | jsonify }},
       "excerpt": {{ page.description | default: page.excerpt | strip_html | truncatewords: 20 | jsonify }},
       "content": {{ page.content | strip_html | jsonify }},
       "url": {{ page.url | jsonify }},
       "date": {{ page.date | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-    {% endunless %}
+    }{% unless forloop.last and filtered_posts.size == 0 %},{% endunless %}
   {% endfor %}
-  {% for post in site.posts %}
-    {% unless post.search_exclude %}
-    ,{
+  
+  {% for post in filtered_posts %}
+    {% if filtered_pages.size > 0 or forloop.first == false %},{% endif %}{
       "title": {{ post.title | jsonify }},
       "excerpt": {{ post.excerpt | strip_html | truncatewords: 20 | jsonify }},
       "content": {{ post.content | strip_html | jsonify }},
       "url": {{ post.url | jsonify }},
       "date": {{ post.date | jsonify }}
     }
-    {% endunless %}
   {% endfor %}
 ]
