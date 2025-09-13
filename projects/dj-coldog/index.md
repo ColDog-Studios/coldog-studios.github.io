@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "DJ ColDog | ColDog Studios"
+title: "ColDog Studios | DJ ColDog"
 description: "DJ ColDog music and albums"
 keywords: "DJ ColDog, Music, Albums"
 header_title: "DJ ColDog"
@@ -38,7 +38,7 @@ Music from Phases 1&2:
 6.  Static
 7.  Stage Lights
 8.  Up-Down
-9.	High and Low
+9.  High and Low
 10. Day N' Night
 11. Here we Are (Bonus)
 
@@ -53,7 +53,7 @@ Music from Phases 1&2:
 5.  Outerspace (feat. Speedy C)
 6.  [Redacted]
 7.  Life
-8. 	Late Nites
+8.      Late Nites
 9.  Sky Dreams
 10. Cookie Monster
 

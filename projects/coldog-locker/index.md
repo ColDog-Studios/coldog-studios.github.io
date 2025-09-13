@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "ColDog Locker | ColDog Studios"
+title: "ColDog Studios | ColDog Locker"
 description: "ColDog Locker - A simple file encryption tool that allows you to encrypt and decrypt directory contents with a password."
 keywords: "ColDog Locker, File Encryption, Directory Security, ColDog Studios, Cybersecurity"
 header_title: "ColDog Locker"
