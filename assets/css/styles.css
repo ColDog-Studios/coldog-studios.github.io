@@ -1,8 +1,8 @@
 /* Main Website CSS */
 
-/* ===== Google Font Import - Roboto, Source Code Pro, Poppins ===== */
+/* ===== Google Font Import - Roboto, Source Code Pro, Montserrat ===== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* Main */
@@ -57,7 +57,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: Nunito, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	color: #002e44;
 }
@@ -71,6 +71,7 @@ li {
 h1 {
 	font-size: 36px;
 	margin-bottom: 14px;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -136,7 +137,7 @@ a.btn {
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 18px;
-	font-family: Nunito, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-weight: 600;
 	transition: all 0.3s ease;
 }
