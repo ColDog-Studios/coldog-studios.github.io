@@ -78,9 +78,48 @@ body[class*="branding"] main img,
 .branding-page main img {
 	max-width: 100%;
 	height: auto;
-	margin: 15px 0;
+	margin: 15px auto;
+	display: block;
 	border-radius: $border-radius-md;
 	box-shadow: $shadow-medium;
+}
+
+/* Center image descriptions and download buttons on branding page */
+body[class*="branding"] main p:has(img) + p,
+body[class*="branding"] main img + p,
+.branding-page main p:has(img) + p,
+.branding-page main img + p {
+	text-align: center;
+	margin: 10px auto 20px;
+}
+
+/* Center download buttons on branding page */
+body[class*="branding"] main .btn,
+.branding-page main .btn {
+	display: inline-block;
+	margin: 10px auto 30px;
+}
+
+/* Center H4 headings for asset sections (before brand colors) */
+body[class*="branding"] main h4,
+.branding-page main h4 {
+	text-align: center;
+}
+
+/* Reset H4 alignment for brand colors section */
+body[class*="branding"] main #brand-colors ~ * h4,
+body[class*="branding"] main h2#brand-colors ~ h3 ~ h4,
+body[class*="branding"] main h2#brand-colors ~ h4,
+.branding-page main #brand-colors ~ * h4,
+.branding-page main h2#brand-colors ~ h3 ~ h4,
+.branding-page main h2#brand-colors ~ h4 {
+	text-align: left;
+}
+
+/* Ensure download button paragraphs are centered */
+body[class*="branding"] main p:has(.btn),
+.branding-page main p:has(.btn) {
+	text-align: center;
 }
 
 /* Strong text styling - branding page only */

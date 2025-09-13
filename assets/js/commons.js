@@ -1,11 +1,10 @@
 /**
  * Commons JavaScript
  * Entry point for common functionality across all pages
- * Following Chirpy theme pattern
  */
 
-import { basic } from "./modules/layouts";
-import { initNavigation, initSearch } from "./modules/components";
+import { basic } from "./modules/layouts.js";
+import { initNavigation, initSearch, initImageLoading } from "./modules/components.js";
 
 // Initialize basic layout functionality
 basic();
@@ -15,3 +14,6 @@ initNavigation();
 
 // Initialize search
 initSearch();
+
+// Initialize image loading
+initImageLoading();
