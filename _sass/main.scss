@@ -3,7 +3,7 @@
  * This file imports all the SCSS modules in the correct order
  */
 
-// Abstracts (variables, mixins, functions) - These don't output CSS
+// Abstracts (variables, mixins)
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
