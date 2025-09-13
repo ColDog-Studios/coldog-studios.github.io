@@ -1,5 +1,6 @@
 ---
 layout: null
+search_exclude: true
 ---
 [
   {% for page in site.pages %}
