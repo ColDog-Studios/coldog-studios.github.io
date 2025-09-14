@@ -94,7 +94,6 @@ export function initSearch() {
 			resultsContainer.style.setProperty("top", rect.bottom + window.scrollY + "px", "important");
 			resultsContainer.style.setProperty("left", leftPosition + "px", "important");
 
-			console.log("DEBUG: Centered positioning - searchBox center:", searchBoxCenterX, "results left:", leftPosition);
 		} else {
 			// Mobile: Add light theme class
 			resultsContainer.classList.add("mobile-theme");
