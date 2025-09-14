@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+	{% if page.url == "/" %}
+	{
+	    "@context": "https://schema.org",
+	    "@type": "Organization",
+	    "name": "ColDog Studios",
+	    "url": "{{ site.url }}",
+	    "logo": "{{ '/assets/images/cds/logo/cdsLogo.png' | absolute_url }}",
+	    "description": "{{ site.description }}",
+	    "foundingDate": "2023",
+	    "contactPoint": {
+	        "@type": "ContactPoint",
+	        "url": "{{ '/contact/' | absolute_url }}"
+	    },
+	    "sameAs": [
+	        "https://twitter.com/ColDogStudios",
+	        "https://linkedin.com/company/coldog-studios",
+	        "https://www.youtube.com/channel/UCg5OwhXiYjPM01L009qfnDw"
+	    ]
+	}
+	{% elsif page.url contains "/projects/" %}
+	{
+	    "@context": "https://schema.org",
+	    "@type": "SoftwareApplication",
+	    "name": "{{ page.title }}",
+	    "description": "{{ page.description }}",
+	    "url": "{{ page.url | absolute_url }}",
+	    "author": {
+	        "@type": "Organization",
+	        "name": "ColDog Studios"
+	    },
+	    "publisher": {
+	        "@type": "Organization",
+	        "name": "ColDog Studios"
+	    }
+	}
+	{% else %}
+	{
+	    "@context": "https://schema.org",
+	    "@type": "WebPage",
+	    "name": "{{ page.title }}",
+	    "description": "{{ page.description }}",
+	    "url": "{{ page.url | absolute_url }}",
+	    "author": {
+	        "@type": "Organization",
+	        "name": "ColDog Studios"
+	    },
+	    "publisher": {
+	        "@type": "Organization",
+	        "name": "ColDog Studios"
+	    }
+	}
+	{% endif %}
+</script>

@@ -1,0 +1,31 @@
+<nav class="nav">
+	<label class="logo">
+		<img src="{{ '/assets/images/cds/cdsIcon.svg' | relative_url }}" alt="ColDog Studios Logo" />
+	</label>
+
+	<ul class="nav-links">
+		<i class="fa-solid fa-times navCloseBtn"></i>
+
+		<!-- Search Box moved to top of mobile menu -->
+		<li class="search-box">
+			<input type="text" id="search-input" placeholder="Search..." autocomplete="off" />
+			<i class="fa-solid fa-search searchBtn"></i>
+			<div id="search-results" class="search-results"></div>
+		</li>
+
+		<li><a href="/">Home</a></li>
+		<li><a href="/projects/">Projects</a></li>
+		<li><a href="/services/">Services</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	</ul>
+
+	<!-- Search Box for desktop (outside nav-links) -->
+	<div class="search-box search-desktop">
+		<input type="text" id="search-input-desktop" placeholder="Search..." autocomplete="off" />
+		<i class="fa-solid fa-search searchBtn"></i>
+		<div id="search-results-desktop" class="search-results"></div>
+	</div>
+
+	<!-- Mobile menu button moved to the right -->
+	<i class="fa-solid fa-bars navOpenBtn"></i>
+</nav>

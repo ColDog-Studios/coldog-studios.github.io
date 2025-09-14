@@ -1,0 +1,74 @@
+/* Image Loading States */
+img {
+	&.img-loading,
+	&.lazy-loading {
+		opacity: 0.7;
+		background: linear-gradient(90deg, #f8f9fa, #e9ecef, #f8f9fa);
+		background-size: 200% 100%;
+		animation: loading-shimmer 1.5s infinite;
+	}
+
+	&.img-loaded,
+	&.lazy-loaded {
+		opacity: 1;
+		transition: opacity 0.3s ease-in-out;
+		animation: none;
+	}
+
+	&.img-error,
+	&.lazy-error {
+		opacity: 0.6;
+		filter: grayscale(1);
+		border: 1px dashed #dee2e6;
+		position: relative;
+		z-index: -1; // Lower than navigation ($z-nav: 100)
+	}
+
+	&.lazy {
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+}
+
+/* Loading shimmer animation */
+@keyframes loading-shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+/* Image fallback styling */
+.img-fallback {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $background-light;
+	color: $text-medium;
+	border: 1px dashed $text-muted;
+	border-radius: $border-radius-sm;
+	padding: $spacing-md;
+	font-size: $font-size-small;
+	text-align: center;
+	min-height: 100px;
+	width: 100%;
+	max-width: 300px;
+
+	&:before {
+		content: "🖼️ ";
+		margin-right: $spacing-xs;
+	}
+}
+
+/* Responsive images */
+img {
+	max-width: 100%;
+	height: auto;
+
+	&.responsive {
+		width: 100%;
+		object-fit: cover;
+	}
+}

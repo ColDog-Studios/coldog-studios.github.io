@@ -1,73 +1,64 @@
-# Allow Googlebot-Image to index images
-User-agent: Googlebot-Image
-Disallow: /
-Allow: /assets/images/
+# ╔══════════════════════════════════════════════════════════════╗
+# ║                                                              ║
+# ║      ██████╗ ██████╗ ██╗     ██████╗  ██████╗  ██████╗       ║
+# ║     ██╔════╝██╔═══██╗██║     ██╔══██╗██╔═══██╗██╔════╝       ║
+# ║     ██║     ██║   ██║██║     ██║  ██║██║   ██║██║  ███╗      ║
+# ║     ██║     ██║   ██║██║     ██║  ██║██║   ██║██║   ██║      ║
+# ║     ╚██████╗╚██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝      ║
+# ║      ╚═════╝ ╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝       ║
+# ║                                                              ║
+# ║    ███████╗████████╗██╗   ██╗██████╗ ██╗ ██████╗ ███████╗    ║
+# ║    ██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║██╔═══██╗██╔════╝    ║
+# ║    ███████╗   ██║   ██║   ██║██║  ██║██║██║   ██║███████╗    ║
+# ║    ╚════██║   ██║   ██║   ██║██║  ██║██║██║   ██║╚════██║    ║
+# ║    ███████║   ██║   ╚██████╔╝██████╔╝██║╚██████╔╝███████║    ║
+# ║    ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝    ║
+# ║                                                              ║
+# ║            Security • Innovation • Excellence                ║
+# ║                Welcome to ColDog Studios!                    ║
+# ║              https://www.coldogstudios.com/                  ║
+# ║                                                              ║
+# ╚══════════════════════════════════════════════════════════════╝                                                                                                                        
 
-# Google Search Bot
+# Major Search Engines (Google, Bing, Yahoo, DuckDuckGo, Yandex)
 User-agent: Googlebot
-Disallow: /assets/html/
-Disallow: /sitemap.html
-Disallow: /branding/
 Disallow: /404.html
-Disallow: /metadata.json
-Disallow: /.legacy/
-Disallow: /contact/
-Disallow: /projects/coldog-locker/
-Disallow: /projects/dj-coldog/
 Disallow: /legal/
-Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
+Allow: /assets/
 
-# Bing Search Bot
 User-agent: Bingbot
-Disallow: /assets/html/
-Disallow: /sitemap.html
-Disallow: /branding/
 Disallow: /404.html
-Disallow: /metadata.json
-Disallow: /.legacy/
-Disallow: /contact/
-Disallow: /projects/coldog-locker/
-Disallow: /projects/dj-coldog/
 Disallow: /legal/
-Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
+Allow: /assets/
 
-# DuckDuckGo Bot
+User-agent: Slurp
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
 User-agent: DuckDuckBot
-Disallow: /assets/html/
-Disallow: /sitemap.html
-Disallow: /branding/
 Disallow: /404.html
-Disallow: /metadata.json
-Disallow: /.legacy/
-Disallow: /contact/
-Disallow: /projects/coldog-locker/
-Disallow: /projects/dj-coldog/
+Disallow: /legal/
+Allow: /assets/
+
+User-agent: YandexBot
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
+# ==================================================
+
+# Google Image Bot - allow images with context
+User-agent: Googlebot-Image
+Disallow: /404.html
 Disallow: /legal/
 Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
+Allow: /projects/
+Allow: /services/
 
-# Brave Search Bot
-User-agent: Brave-Indexer
-Disallow: /assets/html/
-Disallow: /sitemap.html
-Disallow: /branding/
-Disallow: /404.html
-Disallow: /metadata.json
-Disallow: /.legacy/
-Disallow: /contact/
-Disallow: /projects/coldog-locker/
-Disallow: /projects/dj-coldog/
-Disallow: /legal/
-Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
+# ==================================================
 
-# Block AI Training Bots - OpenAI
+# Block AI Training Bots
 User-agent: GPTBot
 Disallow: /
 
@@ -77,70 +68,15 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-# Block AI Training Bots - Google
 User-agent: Google-Extended
 Disallow: /
 
-# Block AI Training Bots - Common AI Crawlers
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: YouBot
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-# Block AI Training Bots - Academic/Research
-User-agent: ia_archiver
-Disallow: /
-
-User-agent: archive.org_bot
-Disallow: /
-
-# Block AI Training Bots - Others
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: DataForSeoBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-# All other bots (fallback)
+# All other bots
 User-agent: *
-Disallow: /assets/html/
-Disallow: /sitemap.html
-Disallow: /branding/
 Disallow: /404.html
-Disallow: /metadata.json
-Disallow: /.legacy/
-Disallow: /contact/
-Disallow: /projects/coldog-locker/
-Disallow: /projects/dj-coldog/
 Disallow: /legal/
+
+# ==================================================
 
 # Sitemap location
 Sitemap: https://www.coldogstudios.com/sitemap.xml

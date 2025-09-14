@@ -1,0 +1,318 @@
+/* Navigation Menu */
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $nav-height;
+	padding: 0px 100px;
+	background: $primary-color;
+	box-shadow: $shadow-heavy;
+	@include flex-center;
+	justify-content: space-between;
+	min-width: 0;
+	box-sizing: border-box;
+
+	.logo {
+		order: 1; /* Logo stays on the left */
+		width: 80px;
+		height: 80px;
+		flex-shrink: 0; /* Prevent logo from shrinking */
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end !important; /* Right-align the nav links */
+		column-gap: $spacing-xl;
+		list-style: none;
+		order: 2; /* Nav links in the middle */
+		flex-shrink: 1;
+		min-width: 0;
+		flex-grow: 1;
+
+		a {
+			transition: all $transition-fast linear;
+			white-space: nowrap; /* Prevent text wrapping */
+		}
+	}
+
+	.search-box {
+		order: 3; /* Search box third */
+	}
+
+	/* Mobile search box (inside nav-links) hidden on desktop */
+	.nav-links .search-box {
+		display: none;
+	}
+
+	/* Desktop search box */
+	.search-desktop {
+		order: 3;
+	}
+
+	.navOpenBtn {
+		order: 4; /* Menu button on the far right */
+		display: none; /* Hidden by default */
+	}
+
+	.navCloseBtn {
+		display: none;
+	}
+
+	&.openSearch .nav-links a {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+nav a {
+	color: $text-light;
+	font-size: 18px;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	transition: color 0.25s ease;
+
+	/* Responsive navigation font size */
+	@include respond-to(sm) {
+		font-size: 16px; /* Slightly reduce on mobile */
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $text-light;
+		transition: transform 0.25s ease-out;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+	}
+}
+
+/* Responsive navigation */
+@include respond-to(xxxl) {
+	.nav {
+		padding: 15px 40px; /* Start reducing padding very early for large screens */
+	}
+}
+
+@include respond-to(xxl) {
+	.nav {
+		padding: 15px 30px; /* More reduction for smaller laptops */
+	}
+}
+
+@include respond-to(xl) {
+	.nav {
+		padding: 15px 25px; /* Even more aggressive reduction */
+	}
+}
+
+@include respond-to(lg) {
+	.nav {
+		padding: 15px 20px; /* Further reduced */
+
+		.nav-links {
+			column-gap: $spacing-lg; /* Reduce gap between nav links */
+			margin-right: 10px; /* Reduce right margin */
+		}
+
+		.search-box {
+			margin: 0 5px; /* Reduce search box margin */
+		}
+	}
+}
+
+@include respond-to(md) {
+	.nav {
+		padding: 15px 15px; /* Very minimal padding */
+
+		.nav-links {
+			column-gap: $spacing-md; /* Further reduce gap between nav links */
+			margin-right: 5px;
+		}
+	}
+}
+
+@include respond-to(sm) {
+	.nav {
+		padding: 15px 20px;
+
+		.navOpenBtn,
+		.navCloseBtn {
+			display: block;
+			color: $text-light;
+			font-size: 24px;
+			cursor: pointer;
+			order: 4; /* Keep on the right */
+			position: absolute;
+			right: 20px; /* Position both buttons in the same spot */
+		}
+
+		.navOpenBtn {
+			display: block; /* Show hamburger by default */
+		}
+
+		.navCloseBtn {
+			display: none; /* Hide close button by default */
+		}
+
+		/* When menu is open, swap the buttons */
+		&.openNav .navOpenBtn {
+			display: none; /* Hide hamburger when menu is open */
+		}
+
+		&.openNav .navCloseBtn {
+			display: block; /* Show close button when menu is open */
+			position: fixed; /* Use fixed positioning to break out of nav-links container */
+			top: calc(#{$nav-height} / 2); /* Position at center of navbar height */
+			right: 20px; /* Same horizontal position as hamburger button */
+			transform: translateY(-50%); /* Center vertically */
+			z-index: calc(#{$z-nav} + 1); /* Ensure it's above everything */
+			color: $text-light;
+			font-size: 24px;
+			cursor: pointer;
+		}
+
+		.nav-links {
+			position: fixed;
+			top: $nav-height; /* Start below the navbar */
+			right: -101vw; /* Start hidden off-screen */
+			height: calc(100vh - #{$nav-height}); /* Fill remaining height */
+			width: 100%;
+			padding: 30px 20px; /* Add top padding for breathing room */
+			gap: 25px; /* Use gap instead of row-gap for better control */
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center the items horizontally in mobile */
+			justify-content: flex-start !important; /* Force align everything to the top */
+			background-color: $background-dark;
+			box-shadow: $shadow-medium;
+			opacity: 0; /* Start invisible */
+			transition: all $transition-slow ease, opacity $transition-slow ease; /* Add opacity transition */
+			z-index: $z-nav;
+			order: unset; /* Reset order for mobile */
+			overflow-y: auto; /* Add scroll if content doesn't fit */
+
+			/* Reset desktop flex-grow for mobile */
+			flex-grow: unset;
+
+			/* Force search box to appear first */
+			.search-box {
+				order: -1; /* This forces the search box to appear first */
+			}
+
+			/* Ensure links are properly styled in mobile */
+			li {
+				list-style: none;
+				text-align: center;
+				width: 100%;
+				margin: 0; /* Remove any default margins */
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 12px 0; /* Slightly smaller padding to fit more content */
+				color: $text-light;
+				margin: 0; /* Remove any default margins */
+			}
+		}
+
+		&.openNav .nav-links {
+			right: -5px; /* Slide in from the right, centered */
+			opacity: 1; /* Fade in to full opacity */
+		}
+
+		/* Hide desktop search box on mobile */
+		.search-desktop {
+			display: none !important;
+		}
+
+		/* Show mobile search box in the slideout menu */
+		.nav-links .search-box {
+			display: flex !important; /* Show in mobile menu */
+			margin: 0 auto; /* Remove vertical margin, keep horizontal centering */
+			width: 90%; /* Make it responsive width */
+			max-width: 300px; /* Limit maximum width */
+			list-style: none; /* Remove list styling since it's in an li */
+			position: relative; /* Enable positioning for search results */
+
+			/* Light color scheme for mobile search */
+			background: $background-light; /* Light background */
+			border: 1px solid $text-muted; /* Light border */
+
+			input {
+				background: transparent;
+				color: $text-dark; /* Dark text on light background */
+
+				&::placeholder {
+					color: $text-medium; /* Medium gray placeholder */
+				}
+			}
+
+			.searchBtn {
+				color: $text-medium; /* Medium gray search icon */
+
+				&:hover {
+					color: $accent-color; /* Accent color on hover */
+				}
+			}
+
+			/* Mobile search results styling */
+			.search-results {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				background: $background-light; /* Light background to match search box */
+				border: 1px solid $text-muted;
+				border-top: none; /* Connect seamlessly with search box */
+				border-radius: $border-radius-md; /* Rounded bottom corners */
+				box-shadow: $shadow-heavy;
+				max-height: 300px; /* Limit height */
+				overflow-y: auto;
+				z-index: calc(#{$z-nav} + 2); /* Above everything else */
+
+				.search-result-item {
+					padding: 10px 15px;
+					border-bottom: 1px solid $text-muted;
+					color: $text-dark; /* Dark text for light background */
+
+					&:hover {
+						background: $background-main; /* Slightly different shade on hover */
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+
+				.search-result-title {
+					color: $accent-color; /* Use accent color for titles */
+					font-weight: 600;
+				}
+
+				.search-result-excerpt {
+					color: $text-medium; /* Medium gray for excerpts */
+					font-size: $font-size-small;
+				}
+			}
+		}
+	}
+}

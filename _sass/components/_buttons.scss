@@ -1,0 +1,6 @@
+/* Button styles */
+
+button,
+a.btn {
+	@include button-base;
+}

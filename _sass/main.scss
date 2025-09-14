@@ -1,0 +1,32 @@
+/*
+ * The main CSS file for ColDog Studios
+ * This file imports all the SCSS modules in the correct order
+ */
+
+// Abstracts (variables, mixins)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base styles (reset, typography, etc.) - Low-specificity, global styles
+@import "base/layout";
+@import "base/typography";
+@import "base/scrollbar";
+
+// Layout (header, footer, navigation) - Structural components
+@import "layout/nav";
+@import "layout/footer";
+
+// Components (buttons, forms, etc.) - Reusable UI components
+@import "components/buttons";
+@import "components/search";
+@import "components/code-blocks";
+@import "components/blockquotes";
+@import "components/back-to-top";
+@import "components/img-loading";
+
+// Pages (page-specific styles if needed in the future)
+@import "pages/404";
+
+// Themes (color variations if needed in the future)
+// @import "themes/light";
+// @import "themes/dark";

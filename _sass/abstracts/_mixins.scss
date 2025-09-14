@@ -1,0 +1,176 @@
+/* SCSS Mixins */
+
+// Flexbox helpers
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+// Button mixin
+@mixin button-base($bg-color: $primary-color, $text-color: $text-light, $hover-bg: $accent-color) {
+	display: inline-flex;
+	align-items: center;
+	gap: $spacing-sm;
+	background-color: $bg-color;
+	border: none;
+	border-radius: $border-radius-xl;
+	color: $text-color !important;
+	padding: $spacing-md $spacing-lg;
+	margin: $spacing-xs 2px;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 18px;
+	font-family: $font-heading;
+	font-weight: 600;
+	transition: all $transition-medium ease;
+
+	/* Responsive button font sizing */
+	@include respond-to(md) {
+		font-size: 16px; /* Reduce on medium screens */
+		padding: $spacing-sm $spacing-md; /* Reduce padding too */
+	}
+
+	@include respond-to(sm) {
+		font-size: 14px; /* Further reduce on mobile */
+		padding: $spacing-sm $spacing-md;
+		gap: $spacing-xs;
+	}
+
+	&:hover {
+		background-color: $hover-bg;
+		transform: translateY(-2px);
+		box-shadow: $shadow-button;
+		color: $text-color !important;
+		transition: all $transition-extra-slow ease-in-out;
+	}
+
+	&:active {
+		background-color: $accent-color-hover;
+		transform: translateY(0);
+		transition: all $transition-fast ease-in-out;
+	}
+}
+
+// Responsive breakpoints
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == xxxl {
+		@media screen and (max-width: $breakpoint-xxxl) {
+			@content;
+		}
+	}
+	@if $breakpoint == xxl {
+		@media screen and (max-width: $breakpoint-xxl) {
+			@content;
+		}
+	}
+	@if $breakpoint == xl {
+		@media screen and (max-width: $breakpoint-xl) {
+			@content;
+		}
+	}
+	@if $breakpoint == lg {
+		@media screen and (max-width: $breakpoint-lg) {
+			@content;
+		}
+	}
+	@if $breakpoint == md {
+		@media screen and (max-width: $breakpoint-md) {
+			@content;
+		}
+	}
+	@if $breakpoint == sm {
+		@media screen and (max-width: $breakpoint-sm) {
+			@content;
+		}
+	}
+	@if $breakpoint == xs {
+		@media screen and (max-width: $breakpoint-xs) {
+			@content;
+		}
+	}
+}
+
+// Text styles
+@mixin heading-base {
+	font-family: $font-heading;
+	font-weight: 700;
+	color: $primary-color;
+}
+
+@mixin body-text {
+	font-family: $font-body;
+	color: $text-dark;
+	font-size: $font-size-body;
+	line-height: 1.6;
+}
+
+// Container
+@mixin container {
+	max-width: $container-width; /* Use max-width instead of width */
+	width: 100%; /* Allow it to be smaller if needed */
+	margin: 0 auto;
+	padding: 0 40px; /* Increased padding to prevent edge-to-edge content */
+
+	@include respond-to(xxl) {
+		padding: 0 30px; /* Reduce padding on smaller desktop screens */
+	}
+
+	@include respond-to(xl) {
+		padding: 0 25px; /* Further reduce on laptop screens */
+	}
+
+	@include respond-to(lg) {
+		padding: 0 20px; /* Medium laptop screens */
+	}
+
+	@include respond-to(md) {
+		max-width: $container-tablet;
+		padding: 0 20px; /* Keep reasonable padding on tablets */
+	}
+
+	@include respond-to(xs) {
+		max-width: $container-mobile;
+		padding: 0 15px; /* Minimal padding on mobile */
+	}
+}
+
+// Prompt box styling
+@mixin prompt-box($bg-color, $border-color, $icon-color, $icon: "\f05a") {
+	background: $bg-color;
+	border: 1px solid $border-color;
+	border-left: 0;
+	position: relative;
+	padding: 1rem 1rem 1rem 3rem;
+	color: $text-dark;
+	border-radius: $border-radius-md;
+	font-style: normal;
+	margin: 1rem 0;
+	box-shadow: $shadow-light;
+
+	&::before {
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		text-align: center;
+		width: 3rem;
+		position: absolute;
+		left: 0.25rem;
+		margin-top: 0.4rem;
+		font-size: 1.2rem;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		content: $icon;
+		color: $icon-color;
+	}
+}

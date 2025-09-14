@@ -1,0 +1,361 @@
+/* Footer Menu */
+footer {
+	position: relative; // Needed for the ::before line to position correctly
+	background: $primary-color;
+	width: 100%;
+	margin-top: auto; // This pushes footer to bottom when using flexbox
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 120px;
+		height: 1px;
+		width: 100%;
+		background: #afafb6;
+	}
+
+	.content {
+		@include container; // Use the same container mixin as main
+		padding: 20px 0px !important;
+
+		.top {
+			@include flex-between;
+			margin-bottom: 40px !important;
+			padding-bottom: 20px !important;
+
+			.logo-details {
+				@include flex-center;
+				gap: 12px;
+				color: $text-light;
+				font-size: 30px;
+
+				/* Responsive font sizing for logo */
+				@include respond-to(md) {
+					font-size: 24px; /* Reduce on medium screens */
+					gap: 10px;
+				}
+
+				@include respond-to(xs) {
+					font-size: 20px; /* Further reduce on mobile at 700px */
+					gap: 8px;
+					flex-direction: column; /* Stack vertically only at 700px and below */
+					text-align: center;
+				}
+			}
+
+			.media-icons {
+				@include flex-center;
+				padding: 20px 0;
+
+				a {
+					height: 40px;
+					width: 40px;
+					margin: 0 $spacing-sm;
+					border-radius: 50%;
+					text-align: center;
+					line-height: 40px;
+					color: $text-light;
+					font-size: 17px;
+					text-decoration: none;
+					transition: all $transition-slow ease;
+
+					// Social media colors
+					&:nth-child(1) {
+						background: #4267b2;
+						&:hover {
+							color: #4267b2;
+							background: #fff;
+						}
+					}
+					&:nth-child(2) {
+						background: #1da1f2;
+						&:hover {
+							color: #1da1f2;
+							background: #fff;
+						}
+					}
+					&:nth-child(3) {
+						background: #e1306c;
+						&:hover {
+							color: #e1306c;
+							background: #fff;
+						}
+					}
+					&:nth-child(4) {
+						background: #0077b5;
+						&:hover {
+							color: #0077b5;
+							background: #fff;
+						}
+					}
+					&:nth-child(5) {
+						background: #ff0000;
+						&:hover {
+							color: #ff0000;
+							background: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		.link-boxes {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.box {
+				width: calc(100% / 5 - 10px);
+				margin-bottom: 20px;
+
+				.link_category {
+					color: $text-light;
+					font-size: 18px;
+					font-weight: 400;
+					margin-bottom: 10px;
+					position: relative;
+
+					/* Responsive font sizing for link categories */
+					@include respond-to(md) {
+						font-size: 16px; /* Reduce on medium screens */
+						margin-bottom: 8px;
+					}
+
+					@include respond-to(sm) {
+						font-size: 14px; /* Further reduce on mobile */
+						margin-bottom: 6px;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -2px;
+						height: 2px;
+						width: 42px;
+						background: $text-light;
+					}
+				}
+
+				li {
+					//margin: $spacing-xs 0;
+					list-style: none;
+
+					a {
+						color: $text-light;
+						font-size: $font-size-small;
+						font-weight: 400;
+						text-decoration: none;
+						opacity: 0.8;
+						transition: all $transition-slow ease;
+
+						&:hover {
+							opacity: 1;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+			.input-box {
+				margin-right: 55px;
+
+				input {
+					height: 40px;
+					width: calc(100% + 55px);
+					outline: none;
+					border: 2px solid #afafb6;
+					background: #444;
+					border-radius: $border-radius-sm;
+					padding: 0 15px;
+					font-size: 15px;
+					color: white;
+					margin-top: 5px;
+
+					&::placeholder {
+						color: #afafb6;
+						font-size: $font-size-body;
+					}
+
+					&[type="button"] {
+						background: white;
+						color: #444;
+						border: none;
+						font-size: 18px;
+						font-weight: 500;
+						margin: $spacing-xs 0;
+						opacity: 0.8;
+						cursor: pointer;
+						transition: all $transition-slow ease;
+
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bottom-details {
+		width: 100%;
+		background: $background-dark;
+
+		.bottom_text {
+			@include container; // Use the same container mixin as main content
+			padding: 20px 0px;
+			@include flex-between;
+
+			span,
+			a {
+				font-size: $font-size-small;
+				font-weight: 400;
+				color: $text-light;
+				opacity: 0.8;
+				text-decoration: none;
+				font-family: $font-body;
+			}
+
+			a {
+				margin-right: 10px;
+
+				&:hover {
+					opacity: 1;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.logo_name {
+	font-family: $font-heading;
+	font-weight: 600;
+}
+
+.link_name a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: $text-light;
+	opacity: 0.8;
+	transition: color 0.25s ease;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $text-light;
+		opacity: 0.8;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+}
+
+#copyrightYear {
+	opacity: 1;
+}
+
+/* Responsive Footer */
+@include respond-to(md) {
+	footer .content {
+		.link-boxes {
+			flex-wrap: wrap;
+
+			.input-box {
+				width: 40%;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@include respond-to(xs) {
+	footer {
+		position: relative;
+
+		/* Use similar layout to 520px for screens 700px and below */
+		&::before {
+			top: 203px; /* Position horizontal line to accommodate vertical layout */
+		}
+
+		.content {
+			.top {
+				flex-direction: column; /* Stack logo and social icons vertically */
+
+				.media-icons {
+					margin-top: $font-size-body;
+					padding: 0px;
+
+					a {
+						height: 35px;
+						width: 35px;
+						font-size: $font-size-small;
+						line-height: 35px;
+					}
+				}
+			}
+
+			.link-boxes {
+				.box {
+					width: calc(100% / 3 - 10px);
+				}
+
+				.input-box {
+					width: 60%;
+				}
+			}
+		}
+
+		.bottom-details .bottom_text {
+			span,
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	footer {
+		&::before {
+			top: 203px; /* Increased from 145px to accommodate vertical layout */
+		}
+
+		.content {
+			.top {
+				flex-direction: column;
+
+				.media-icons {
+					margin-top: $font-size-body;
+					padding: 0px;
+				}
+			}
+
+			.link-boxes {
+				.box {
+					width: calc(100% / 2 - 10px);
+				}
+
+				.input-box {
+					width: 100%;
+				}
+			}
+		}
+
+		.bottom-details .bottom_text {
+			display: block;
+		}
+	}
+}

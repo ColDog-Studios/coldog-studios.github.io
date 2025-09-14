@@ -1,0 +1,22 @@
+/*
+ * Bundle file for ColDog Studios
+ * This file is used for development builds with additional debugging styles
+ * For production, use main.scss instead
+ */
+
+// Import the main styles
+@import "main";
+
+// Development/debugging styles can be added here
+/* 
+// Example debugging styles:
+* {
+  outline: 1px solid red !important;
+}
+
+.debug-grid {
+  background: linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+*/
