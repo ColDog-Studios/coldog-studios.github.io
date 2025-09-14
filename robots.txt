@@ -1,12 +1,52 @@
+# ╔══════════════════════════════════════════════════════════╗
+# ║                                                          ║
+# ║    ██████╗ ██████╗ ██╗     ██████╗  ██████╗  ██████╗     ║
+# ║   ██╔════╝██╔═══██╗██║     ██╔══██╗██╔═══██╗██╔════╝     ║
+# ║   ██║     ██║   ██║██║     ██║  ██║██║   ██║██║  ███╗    ║
+# ║   ██║     ██║   ██║██║     ██║  ██║██║   ██║██║   ██║    ║
+# ║   ╚██████╗╚██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝    ║
+# ║    ╚═════╝ ╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝     ║
+# ║                                                          ║
+# ║  ███████╗████████╗██╗   ██╗██████╗ ██╗ ██████╗ ███████╗  ║
+# ║  ██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║██╔═══██╗██╔════╝  ║
+# ║  ███████╗   ██║   ██║   ██║██║  ██║██║██║   ██║███████╗  ║
+# ║  ╚════██║   ██║   ██║   ██║██║  ██║██║██║   ██║╚════██║  ║
+# ║  ███████║   ██║   ╚██████╔╝██████╔╝██║╚██████╔╝███████║  ║
+# ║  ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝  ║
+# ║                                                          ║
+# ║            Security • Innovation • Excellence            ║
+# ║                Welcome to ColDog Studios!                ║
+# ║             https://www.coldogstudios.com                ║
+# ║                                                          ║
+# ╚══════════════════════════════════════════════════════════╝                                                                                                                        
+
 # Major Search Engines (Google, Bing, Yahoo, DuckDuckGo, Yandex)
 User-agent: Googlebot
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
 User-agent: Bingbot
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
 User-agent: Slurp
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
 User-agent: DuckDuckBot
+Disallow: /404.html
+Disallow: /legal/
+Allow: /assets/
+
 User-agent: YandexBot
 Disallow: /404.html
 Disallow: /legal/
 Allow: /assets/
+
+# ==================================================
 
 # Google Image Bot - allow images with context
 User-agent: Googlebot-Image
