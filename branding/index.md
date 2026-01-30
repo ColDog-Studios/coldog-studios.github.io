@@ -131,7 +131,7 @@ Official dark theme wallpaper for desktop and mobile.
 <strong style="font-size: 18px;">Primary Blue</strong><br/>
 <strong>HEX:</strong> <strong>#0096DC</strong><br/>
 <strong>RGB:</strong> <strong>0, 150, 220<strong><br/>
-<strong>RGBA:</strong> 0, <strong>150, 220, 1</strong>
+<strong>RGBA:</strong> <strong>0, 150, 220, 1</strong>
 </div>
 
 Use as the primary brand color for links, buttons, and key UI elements. This is the most recognizable ColDog Studios color.
