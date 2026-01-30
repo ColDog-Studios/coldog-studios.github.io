@@ -124,35 +124,59 @@ Official dark theme wallpaper for desktop and mobile.
 
 ### ColDog Studios Colors
 
-#### Primary Blue
+<div style="margin: 20px 0;">
 
-**#0096DC** | **RGB(0, 150, 220)** | **RGBA(0, 150, 220, 1)**
+#### Primary Blue
+<div style="background-color: #0096DC; color: #FFFFFF; padding: 35px 25px; border-radius: 16px; margin: 10px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
+<strong style="font-size: 18px;">Primary Blue</strong><br/>
+<strong>HEX:</strong> #0096DC<br/>
+<strong>RGB:</strong> 0, 150, 220<br/>
+<strong>RGBA:</strong> 0, 150, 220, 1
+</div>
 
 Use as the primary brand color for links, buttons, and key UI elements. This is the most recognizable ColDog Studios color.
 
 #### Dark Blue
-
-**#002E44** | **RGB(0, 46, 68)** | **RGBA(0, 46, 68, 1)**
+<div style="background-color: #002E44; color: #FFFFFF; padding: 35px 25px; border-radius: 16px; margin: 10px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
+<strong style="font-size: 18px;">Dark Blue</strong><br/>
+<strong>HEX:</strong> #002E44<br/>
+<strong>RGB:</strong> 0, 46, 68<br/>
+<strong>RGBA:</strong> 0, 46, 68, 1
+</div>
 
 Use for headers, navigation, and primary text on light backgrounds. Provides strong contrast and readability.
 
 #### Accent Blue
-
-**#0077B6** | **RGB(0, 119, 182)** | **RGBA(0, 119, 182, 1)**
+<div style="background-color: #0077B6; color: #FFFFFF; padding: 35px 25px; border-radius: 16px; margin: 10px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
+<strong style="font-size: 18px;">Accent Blue</strong><br/>
+<strong>HEX:</strong> #0077B6<br/>
+<strong>RGB:</strong> 0, 119, 182<br/>
+<strong>RGBA:</strong> 0, 119, 182, 1
+</div>
 
 Use for hover states, active elements, and secondary accents. Works well with the primary blue.
 
 #### Light Gray
-
-**#FAFAFA** | **RGB(250, 250, 250)** | **RGBA(250, 250, 250, 1)**
+<div style="background-color: #FAFAFA; color: #1A1A1A; padding: 35px 25px; border-radius: 16px; margin: 10px 0; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);">
+<strong style="font-size: 18px;">Light Gray</strong><br/>
+<strong>HEX:</strong> #FAFAFA<br/>
+<strong>RGB:</strong> 250, 250, 250<br/>
+<strong>RGBA:</strong> 250, 250, 250, 1
+</div>
 
 Use as the primary background color and for light UI elements.
 
 #### Dark Gray
-
-**#333333** | **RGB(51, 51, 51)** | **RGBA(51, 51, 51, 1)**
+<div style="background-color: #333333; color: #FFFFFF; padding: 35px 25px; border-radius: 16px; margin: 10px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
+<strong style="font-size: 18px;">Dark Gray</strong><br/>
+<strong>HEX:</strong> #333333<br/>
+<strong>RGB:</strong> 51, 51, 51<br/>
+<strong>RGBA:</strong> 51, 51, 51, 1
+</div>
 
 Use for body text and secondary content on light backgrounds.
+
+</div>
 
 ## Usage Guidelines
 
