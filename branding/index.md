@@ -130,7 +130,7 @@ Official dark theme wallpaper for desktop and mobile.
 <div style="background-color: #0096DC; color: #FFFFFF; padding: 35px 25px; border-radius: 16px; margin: 10px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
 <strong style="font-size: 18px;">Primary Blue</strong><br/>
 <strong>HEX:</strong> <strong>#0096DC</strong><br/>
-<strong>RGB:</strong> <strong>0, 150, 220<strong><br/>
+<strong>RGB:</strong> <strong>0, 150, 220</strong><br/>
 <strong>RGBA:</strong> <strong>0, 150, 220, 1</strong>
 </div>
 
