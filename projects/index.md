@@ -8,7 +8,7 @@ header_title: "Projects"
 
 ## ColDog Locker
 
-ColDog Locker is a simple file locker that allows you to encrypt and decrypt the contents of a 'managed' directory with a password. Built with .NET 8 and C#, it provides secure file management through an intuitive interface, giving you customized control over your sensitive data.
+ColDog Locker is a simple file locker that allows you to encrypt and decrypt the contents of a 'managed' directory with a password. Built with .NET 10 and C#, it provides secure file management through an intuitive interface, giving you customized control over your sensitive data.
 
 <center>
 	<a href="https://github.com/ColDog-Studios/ColDog-Locker">
@@ -46,6 +46,8 @@ With our cutting edge security technology, you can sleep soundly at night thanks
 	</a>
 </center>
 
+<!--
+
 ## DJ ColDog
 
 DJ ColDog is a rapper, producer, and of course, a DJ. DJ started producing music on December 25th, 2018. DJ has advanced through multiple phases throughout his career, the most influential being the rapping phase. DJ has released all of his music currently on SoundCloud. However, once our brand deal is finalized, DJ's music will be available on almost every music platform imaginable.
@@ -55,3 +57,5 @@ DJ ColDog is a rapper, producer, and of course, a DJ. DJ started producing music
 		<button class="btn"><i class="fa-solid fa-headphones-simple"></i> Read more. . .</button>
 	</a>
 </center>
+
+-->
