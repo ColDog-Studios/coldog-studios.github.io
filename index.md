@@ -1,25 +1,23 @@
 ---
 layout: default
 title: "ColDog Studios | Home"
-description: "Welcome to ColDog Studios. We offer comprehensive security services."
-keywords: "ColDog Studios, ColDog, ColDog5044"
+description: "Welcome to ColDog Studios. We offer cybersecurity, network consulting, and IT implementation services."
+keywords: "ColDog Studios, ColDog, ColDog5044, cybersecurity, network consulting, IT services"
 header_title: "Home"
 ---
 
-## Security Services
+## Security and IT Services
 
-At ColDog Studios, we offer comprehensive security services to protect your business from cyber threats. Our Security solutions include:
+At ColDog Studios, we help small businesses and organizations improve the security, reliability, and structure of their technology environments. Our services include:
 
 -   Vulnerability Management
 -   Compliance Management
--   And more
+-   Network Design and Segmentation
+-   Hardware Installation and Configuration
+-   Security and IT Consulting
 
-## Cybersecurity Knowledge
+## Practical Consulting
 
-Stay informed with the latest trends and best practices in cybersecurity. Our blog covers a wide range of topics, including:
+We work on practical infrastructure problems, including designing tenant or guest-style networks, isolating business systems from shared access networks, and configuring hardware to support real operational needs.
 
--   Cyber Threats and Vulnerabilities
--   Security Tools and Techniques
--   Real-World Examples
-
-<!--[Visit our blog](/blog/) to learn more and stay updated.-->
+[View our services](/services/) or [contact us](/contact/) to talk through a project.
