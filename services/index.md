@@ -1,54 +1,64 @@
 ---
 layout: default
 title: "ColDog Studios | Services"
-description: "ColDog Studios offers cybersecurity, network consulting, and IT implementation services for small businesses and organizations."
-keywords: "ColDog Studios, Security Services, Cybersecurity, Managed Services, Network Consulting, IT Consulting"
+description: "ColDog Studios offers project-based cybersecurity, network, and IT consulting with hands-on technical implementation."
+keywords: "ColDog Studios, Security Consulting, Cybersecurity, Network Consulting, IT Consulting, Technical Implementation"
 header_title: "Services"
 ---
 
-## Security, Network, and IT Services
+## Consulting and Implementation Services
 
-At ColDog Studios, we provide practical security and IT services designed around your organization's actual environment. We help with assessment, planning, implementation, and documentation so technical decisions are clear and maintainable.
+ColDog Studios provides project-based cybersecurity, network, and IT consulting for small businesses and organizations. The focus is on practical guidance backed by hands-on implementation, clear documentation, and a clean handoff.
 
-### Vulnerability Management
+### Cybersecurity Consulting
 
-We identify, assess, and remediate security vulnerabilities in your systems before they can be exploited by malicious actors. Our proactive approach includes:
+We help review your current security posture, identify meaningful risks, and turn recommendations into practical next steps.
 
--   Regular security assessments and penetration testing
--   Continuous monitoring for new vulnerabilities
--   Risk prioritization and remediation planning
--   Compliance reporting and documentation
+-   Security assessments and gap reviews
+-   Vulnerability review and remediation planning
+-   Security policy and process guidance
+-   Risk prioritization and technical roadmaps
+-   Security documentation and handoff materials
 
-### Network Consulting
+### Network and Infrastructure Consulting
 
-We design and configure networks that keep business systems separated from shared or tenant-facing access. This includes scenarios where one ISP connection supports both production operations and a tenant or guest-style network offered as a building amenity.
+We design, review, and configure business networks and supporting infrastructure with a focus on reliability, security, and maintainability.
 
-Network consulting can include:
+-   Network design and segmentation
+-   Firewall, switch, and wireless configuration
+-   Router and access-control planning
+-   Hardware selection and installation support
+-   Troubleshooting and environment cleanup
+-   Network diagrams and implementation documentation
 
--   Network design and review
--   Tenant, guest, and production network segmentation
--   VLAN, firewall, and access-control planning
--   Wireless network configuration
--   Router, switch, and firewall setup
--   Documentation of network layout and security boundaries
+### Compliance and Readiness
 
-### Hardware Installation and Configuration
+We can help prepare for compliance, audits, vendor reviews, or internal security requirements by mapping technical controls to clear evidence and remediation work.
 
-We can assist with hands-on installation and configuration for small business infrastructure projects, including:
+-   Control gap assessments
+-   Policy and procedure review
+-   Evidence collection planning
+-   Remediation tracking
+-   Audit and questionnaire support
 
--   Network equipment installation
--   Workstation and peripheral setup
--   Wireless access point placement and configuration
--   Basic rack, cabling, and device organization
--   Post-installation testing and troubleshooting
+### Incident Readiness and Response Support
 
-### Additional Services
+We help organizations prepare for security incidents and recover from technical issues with clearer procedures and better visibility.
 
-Our security services extend beyond vulnerability management to provide complete protection:
+-   Incident response planning
+-   Logging and alerting recommendations
+-   Backup and recovery review
+-   Containment and recovery support
+-   Post-incident review and hardening
 
--   **Compliance Management** - Help you meet industry standards and regulatory requirements
--   **Security Awareness Training** - Educate your team on cybersecurity best practices
--   **Incident Response** - Rapid response and recovery from security incidents
--   **Security Consulting** - Strategic guidance for your cybersecurity and IT program
+### Technical Implementation
 
-[Contact us](/contact/) to talk through your security, network, or IT project.
+We can help turn plans into working systems when a project needs hands-on technical execution.
+
+-   Endpoint and workstation setup
+-   Server and application configuration
+-   Identity and access configuration
+-   Security tool setup and hardening
+-   Documentation, testing, and handoff
+
+[Contact us](/contact/) to talk through a consulting or implementation project.
