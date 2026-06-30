@@ -10,7 +10,7 @@ header_title: "Services"
 
 ColDog Studios provides project-based cybersecurity, network, and IT consulting for small businesses and organizations. The focus is on practical guidance backed by hands-on implementation, clear documentation, and a clean handoff.
 
-### Cybersecurity Consulting
+### [Cybersecurity Consulting](/services/cybersecurity-consulting/)
 
 We help review your current security posture, identify meaningful risks, and turn recommendations into practical next steps.
 
@@ -20,7 +20,9 @@ We help review your current security posture, identify meaningful risks, and tur
 -   Risk prioritization and technical roadmaps
 -   Security documentation and handoff materials
 
-### Network and Infrastructure Consulting
+[Learn more about cybersecurity consulting](/services/cybersecurity-consulting/)
+
+### [Network and Infrastructure Consulting](/services/network-infrastructure-consulting/)
 
 We design, review, and configure business networks and supporting infrastructure with a focus on reliability, security, and maintainability.
 
@@ -31,7 +33,9 @@ We design, review, and configure business networks and supporting infrastructure
 -   Troubleshooting and environment cleanup
 -   Network diagrams and implementation documentation
 
-### Compliance and Readiness
+[Learn more about network and infrastructure consulting](/services/network-infrastructure-consulting/)
+
+### [Compliance and Readiness](/services/compliance-readiness/)
 
 We can help prepare for compliance, audits, vendor reviews, or internal security requirements by mapping technical controls to clear evidence and remediation work.
 
@@ -41,7 +45,9 @@ We can help prepare for compliance, audits, vendor reviews, or internal security
 -   Remediation tracking
 -   Audit and questionnaire support
 
-### Incident Readiness and Response Support
+[Learn more about compliance and readiness](/services/compliance-readiness/)
+
+### [Incident Readiness and Response Support](/services/incident-readiness-response/)
 
 We help organizations prepare for security incidents and recover from technical issues with clearer procedures and better visibility.
 
@@ -51,7 +57,9 @@ We help organizations prepare for security incidents and recover from technical 
 -   Containment and recovery support
 -   Post-incident review and hardening
 
-### Technical Implementation
+[Learn more about incident readiness and response support](/services/incident-readiness-response/)
+
+### [Technical Implementation](/services/technical-implementation/)
 
 We can help turn plans into working systems when a project needs hands-on technical execution.
 
@@ -60,5 +68,7 @@ We can help turn plans into working systems when a project needs hands-on techni
 -   Identity and access configuration
 -   Security tool setup and hardening
 -   Documentation, testing, and handoff
+
+[Learn more about technical implementation](/services/technical-implementation/)
 
 [Contact us](/contact/) to talk through a consulting or implementation project.
