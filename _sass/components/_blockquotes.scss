@@ -41,10 +41,6 @@ blockquote[class^="prompt-"] {
 /* Specific prompt types */
 blockquote.prompt-tip {
 	@include prompt-box(var(--prompt-tip-bg), var(--prompt-tip-border), var(--prompt-tip-icon), "\f0eb");
-
-	&::before {
-		font-weight: 400; // regular style for lightbulb
-	}
 }
 
 blockquote.prompt-info {
@@ -56,7 +52,7 @@ blockquote.prompt-info {
 }
 
 blockquote.prompt-warning {
-	@include prompt-box(var(--prompt-warning-bg), var(--prompt-warning-border), var(--prompt-warning-icon));
+	@include prompt-box(var(--prompt-warning-bg), var(--prompt-warning-border), var(--prompt-warning-icon), "\f071");
 }
 
 blockquote.prompt-danger {

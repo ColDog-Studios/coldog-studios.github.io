@@ -21,7 +21,7 @@ ColDog Locker is a simple file locker that allows you to encrypt and decrypt the
 RootPlane is an open, modular control plane for managing, supporting, and securing IT environments through one universal agent.
 
 > RootPlane is currently in the planning and design stage, and is not ready released or production-ready.
-> {: .prompt-info }
+{: .prompt-info }
 
 <center>
 	<a href="https://github.com/ColDog-Studios/RootPlane">
@@ -34,7 +34,7 @@ RootPlane is an open, modular control plane for managing, supporting, and securi
 Computer Automated Robotic Listening Software Operations Navigation, or CARLSON, is a personal voice assistant written in Python.
 
 > CARLSON is currently still in development and is not released or production-ready.
-> {: prompt-info }
+{: .prompt-info }
 
 <center>
 	<a href="https://github.com/ColDog-Studios/CARLSON/">

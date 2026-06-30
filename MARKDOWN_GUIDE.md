@@ -188,41 +188,41 @@ The site supports custom blockquotes with prompt styling:
 
 ```markdown
 > Use this for helpful tips and suggestions.
-> {: .prompt-tip }
+{: .prompt-tip }
 ```
 
 > Use this for helpful tips and suggestions.
-> {: .prompt-tip }
+{: .prompt-tip }
 
 #### Info Prompt
 
 ```markdown
 > Use this for informational content.
-> {: .prompt-info }
+{: .prompt-info }
 ```
 
 > Use this for informational content.
-> {: .prompt-info }
+{: .prompt-info }
 
 #### Warning Prompt
 
 ```markdown
 > Use this for warnings and important notes.
-> {: .prompt-warning }
+{: .prompt-warning }
 ```
 
 > Use this for warnings and important notes.
-> {: .prompt-warning }
+{: .prompt-warning }
 
 #### Danger Prompt
 
 ```markdown
 > Use this for errors and critical information.
-> {: .prompt-danger }
+{: .prompt-danger }
 ```
 
 > Use this for errors and critical information.
-> {: .prompt-danger }
+{: .prompt-danger }
 
 ### Usage Notes
 

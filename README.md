@@ -84,23 +84,23 @@ Use Kramdown's attribute list syntax to add prompt classes:
 
 ```markdown
 > An example showing the `tip` type prompt.
-> {: .prompt-tip }
+{: .prompt-tip }
 
 > An example showing the `info` type prompt.
-> {: .prompt-info }
+{: .prompt-info }
 
 > An example showing the `warning` type prompt.
-> {: .prompt-warning }
+{: .prompt-warning }
 
 > An example showing the `danger` type prompt.
-> {: .prompt-danger }
+{: .prompt-danger }
 ```
 
 Each prompt type has:
 
 -   **Tip**: Light blue background with lightbulb icon
 -   **Info**: Blue background with info icon (rotated)
--   **Warning**: Yellow background with info icon
+-   **Warning**: Yellow background with warning icon
 -   **Danger**: Red background with exclamation triangle icon
 
 The prompts include Font Awesome icons and are fully responsive.
