@@ -99,8 +99,8 @@ Use Kramdown's attribute list syntax to add prompt classes:
 Each prompt type has:
 
 -   **Tip**: Light blue background with lightbulb icon
--   **Info**: Blue background with info icon (rotated)
+-   **Info**: Blue background with info icon
 -   **Warning**: Yellow background with warning icon
 -   **Danger**: Red background with exclamation triangle icon
 
-The prompts include Font Awesome icons and are fully responsive.
+The prompts include icons and are fully responsive.

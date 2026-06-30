@@ -227,7 +227,7 @@ The site supports custom blockquotes with prompt styling:
 ### Usage Notes
 
 -   Use Kramdown's attribute list syntax `{: .class-name }`
--   Each prompt includes appropriate Font Awesome icons
+-   Each prompt includes an appropriate icon
 -   Colors match your site's design system
 -   Fully responsive design
 
