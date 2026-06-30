@@ -16,6 +16,21 @@ ColDog Locker is a simple file locker that allows you to encrypt and decrypt the
 	</a>
 </center>
 
+## RootPlane
+
+RootPlane is an open, modular control plane for managing, supporting, and securing IT environments through one universal agent.
+
+> RootPlane is currently in the planning and design stage, and is not ready released or production-ready.
+> {: .prompt-info }
+
+<center>
+	<a href="https://github.com/ColDog-Studios/RootPlane">
+		<button class="btn"><i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-up-right-from-square"></i></button>
+	</a>
+</center>
+
+<!--
+
 ## PowerDog
 
 PowerDog is PowerShell with extra ColDog Studios tools. It's a CLI tool that empowers developers with essential commands for project setup and management. PowerDog enhances your PowerShell experience with custom functions and utilities designed to streamline your development workflow.
@@ -26,22 +41,17 @@ PowerDog is PowerShell with extra ColDog Studios tools. It's a CLI tool that emp
 	</a>
 </center>
 
+-->
+
 ## C.A.R.L.S.O.N.
 
-Computer Automated Robotic Listening Software Operations Navigation, or CARLSON, is a personal voice assistant written in Python. CARLSON is currently still in development.
+Computer Automated Robotic Listening Software Operations Navigation, or CARLSON, is a personal voice assistant written in Python.
+
+> CARLSON is currently still in development and is not released or production-ready.
+> {: prompt-info }
 
 <center>
 	<a href="https://github.com/ColDog-Studios/CARLSON/">
-		<button class="btn"><i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-up-right-from-square"></i></button>
-	</a>
-</center>
-
-## Sl66p Security
-
-With our cutting edge security technology, you can sleep soundly at night thanks to our Sl66p Security. Sl66p Security is still in development.
-
-<center>
-	<a href="https://github.com/ColDog-Studios/Sl66p-Security">
 		<button class="btn"><i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-up-right-from-square"></i></button>
 	</a>
 </center>
