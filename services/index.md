@@ -20,7 +20,9 @@ We help review your current security posture, identify meaningful risks, and tur
 -   Risk prioritization and technical roadmaps
 -   Security documentation and handoff materials
 
-[Learn more about cybersecurity consulting](/services/cybersecurity-consulting/)
+<center>
+	<a href="/services/cybersecurity-consulting/" class="btn"><i class="fa-solid fa-circle-info"></i> Learn more <i class="fa-solid fa-arrow-right"></i></a>
+</center>
 
 ### [Network and Infrastructure Consulting](/services/network-infrastructure-consulting/)
 
@@ -33,7 +35,9 @@ We design, review, and configure business networks and supporting infrastructure
 -   Troubleshooting and environment cleanup
 -   Network diagrams and implementation documentation
 
-[Learn more about network and infrastructure consulting](/services/network-infrastructure-consulting/)
+<center>
+	<a href="/services/network-infrastructure-consulting/" class="btn"><i class="fa-solid fa-circle-info"></i> Learn more <i class="fa-solid fa-arrow-right"></i></a>
+</center>
 
 ### [Compliance and Readiness](/services/compliance-readiness/)
 
@@ -45,7 +49,9 @@ We can help prepare for compliance, audits, vendor reviews, or internal security
 -   Remediation tracking
 -   Audit and questionnaire support
 
-[Learn more about compliance and readiness](/services/compliance-readiness/)
+<center>
+	<a href="/services/compliance-readiness/" class="btn"><i class="fa-solid fa-circle-info"></i> Learn more <i class="fa-solid fa-arrow-right"></i></a>
+</center>
 
 ### [Incident Readiness and Response Support](/services/incident-readiness-response/)
 
@@ -57,7 +63,9 @@ We help organizations prepare for security incidents and recover from technical 
 -   Containment and recovery support
 -   Post-incident review and hardening
 
-[Learn more about incident readiness and response support](/services/incident-readiness-response/)
+<center>
+	<a href="/services/incident-readiness-response/" class="btn"><i class="fa-solid fa-circle-info"></i> Learn more <i class="fa-solid fa-arrow-right"></i></a>
+</center>
 
 ### [Technical Implementation](/services/technical-implementation/)
 
@@ -69,6 +77,8 @@ We can help turn plans into working systems when a project needs hands-on techni
 -   Security tool setup and hardening
 -   Documentation, testing, and handoff
 
-[Learn more about technical implementation](/services/technical-implementation/)
+<center>
+	<a href="/services/technical-implementation/" class="btn"><i class="fa-solid fa-circle-info"></i> Learn more <i class="fa-solid fa-arrow-right"></i></a>
+</center>
 
 [Contact us](/contact/) to talk through a consulting or implementation project.
